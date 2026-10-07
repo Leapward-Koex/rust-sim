@@ -1,0 +1,4 @@
+[toolchain]
+# This host installs Rust 1.99.0 under the stable alias. Cargo.lock fixes crates.
+channel = "stable"
+profile = "minimal"

@@ -1,0 +1,23 @@
+[package]
+name = "dicty-sim"
+version = "0.1.0"
+edition = "2024"
+default-run = "dicty-sim"
+description = "Compatibility implementation of the captured Dicty simulation"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+rand = "0.9"
+rand_chacha = "0.9"
+rayon = "1.10"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order", "arbitrary_precision"] }
+statrs = { version = "0.18", default-features = false }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+
+[[bin]]
+name = "dicty-fixture"
+path = "src/bin/fixture.rs"

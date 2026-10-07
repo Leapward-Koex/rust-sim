@@ -1,0 +1,1241 @@
+{
+  "captured_date": "2026-10-07",
+  "timezone": "Pacific/Auckland",
+  "source_directory": "C:\\Dev\\Dicty sim\\DictySimulator",
+  "git_commit": "62d707eee5f348320d6e50ab034b18a3a1a45b23",
+  "git_branch": "main",
+  "git_status_porcelain": "",
+  "scope": "All tracked files hashed; Python, Markdown, text dependencies, import template, test_params files, and the VS Code launch configuration copied byte-for-byte. Generated output data are hashed only.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "21de1dca02303d5fce371946ce0f880bb5390737e09c0422e45768fb745ea622",
+      "bytes": 18,
+      "snapshot": false
+    },
+    {
+      "path": ".vscode/launch.json",
+      "sha256": "440b7050ec46d5b4642cc89988cbc90d6efda12a8cdc4d6192ba04aad1dd7650",
+      "bytes": 353,
+      "snapshot": true
+    },
+    {
+      "path": "GUI/tooltip.py",
+      "sha256": "a956812a0ddad6b6030445c8e235a8bc5a9b6d7cae7eb9461ee7db1de6883708",
+      "bytes": 1013,
+      "snapshot": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "0c89df12fa235c36dfa7b10cc88378f362a2990ddf7290dd76f0392bb46d2e39",
+      "bytes": 567,
+      "snapshot": true
+    },
+    {
+      "path": "cell.py",
+      "sha256": "8b54b96f10fa020303e7c63028881a34ef6a3023113fe2d1f38077b1f79e2c36",
+      "bytes": 5545,
+      "snapshot": true
+    },
+    {
+      "path": "custom_figure_maker.py",
+      "sha256": "f3aa89488d4993906d1d212a0bb6e143e237ee3416e467b39c6db1728d2a9e67",
+      "bytes": 3986,
+      "snapshot": true
+    },
+    {
+      "path": "data_files/LOW_MUTATION_RUNS/allEpistasis_0.0001Mutation.json",
+      "sha256": "5620490ff6f81468de1c2e1ea7acabce41591977beb6ea499f9ef61ef5528ddf",
+      "bytes": 272890,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/LOW_MUTATION_RUNS/chEpistasis_0.0001Mutation.json",
+      "sha256": "3721f34fa82ee5952f600e9f1975319f75734683e8a3f50b550ad4fe5756221c",
+      "bytes": 273798,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/LOW_MUTATION_RUNS/default_0.001Cost_0.0001Mutation.json",
+      "sha256": "1039d92f58eb4b8954991bc2eccdb7b916177ac6296e3bac154f11f80b96f398",
+      "bytes": 272651,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/LOW_MUTATION_RUNS/default_0.001chGerm_0.0001Mutation.json",
+      "sha256": "ea41f04964708cb95ca851f83bca347e01f9d830a3220571ca0372e6b6b746ab",
+      "bytes": 273243,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/LOW_MUTATION_RUNS/default_0.01Cost_0.0001Mutation.json",
+      "sha256": "1a5602d8712954a11daaf6b3d2eb3dbd45071fea1d0674f3b4305800558c5859",
+      "bytes": 272846,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/LOW_MUTATION_RUNS/default_0.01chGerm_0.0001Mutation.json",
+      "sha256": "72bb4f73494e89258d9a4280b816e3a571948a5d6e938d8d72ba9dab7b8b79bd",
+      "bytes": 272704,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/LOW_MUTATION_RUNS/default_0.1Cost_0.0001Mutation.json",
+      "sha256": "2b831d0054f6c8f65b64fe0731ff9c0f7aa2b83f4a90e482be0511fa9fa0b547",
+      "bytes": 254265,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/LOW_MUTATION_RUNS/default_0.1chGerm_0.0001Mutation.json",
+      "sha256": "e3751ee040353848c407c4f97b24228ba6719d19fcfcbc7dc1f48a964b859ff1",
+      "bytes": 272833,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/LOW_MUTATION_RUNS/default_0.25Recomb_10Sex_0.0001Mutation.json",
+      "sha256": "18183ef5acb175f1b15e974885b1c8b43cef7768cd023e354edf5c264c7742cf",
+      "bytes": 274622,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/LOW_MUTATION_RUNS/fig1a_a_0.0001Mutation.json",
+      "sha256": "ab7b5ffd6d7463e58b6313a3ed1fc5bf82924c8e7d2113f3cdeb8af50087655c",
+      "bytes": 272626,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/LOW_MUTATION_RUNS/fig1a_b_0.0001Mutation.json",
+      "sha256": "2442e5b746ca078dc5fd0abaa5fff02cc2053c3b39813d9f9b3911701621521b",
+      "bytes": 269386,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/LOW_MUTATION_RUNS/fig1a_c_0.0001Mutation.json",
+      "sha256": "18a1fef8bee704dee722047f30908e3663677711f645576c434f07a47fdc9029",
+      "bytes": 274176,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/attemp2_cycling.json",
+      "sha256": "43151cff6226c402b3f4b553e8698da9f084ec345eb96c49ab999483d69ac71f",
+      "bytes": 458617,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/attempt1_cycling.json",
+      "sha256": "191a309df48b9b0e16a14e709cbf9a87668fe720d01b0c83e8f2ce22be3afd5e",
+      "bytes": 153302,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/attempt3_cycling.json",
+      "sha256": "6ddff17574ce9c97e9bbb12a55f14dde8d3630bc28dc657b9e0889ed7b17cb03",
+      "bytes": 422213,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/cheater_only_defaults.json",
+      "sha256": "75f795ae4624f976d96ecfedc264277bf62d71c45ff23fdc8b73f23c61328e97",
+      "bytes": 193286,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/default_0.001chGerm.json",
+      "sha256": "81e2ef6edc295328f09c7baa5c432e26fa4061432b4437b2d7984fd2cd5464dc",
+      "bytes": 273988,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/default_0.01chGerm.json",
+      "sha256": "b267076b084648a312742abe1084613b1b36859a6eb248845f209d84016597b6",
+      "bytes": 274304,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/default_0.1chGerm.json",
+      "sha256": "8509bcfb003852e03d4cd35f9f2d74dfdc43aed96a7ec882c086841a58fe703c",
+      "bytes": 274835,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/default_1chGerm.json",
+      "sha256": "12292fc1cd0b43d17bc40674c6c6370a333d783c295f34a66b99e5dcc2872528",
+      "bytes": 275019,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/default_everything.json",
+      "sha256": "2b9c4d60acf99b377affa8180bb1e27b9a837223f8e28626384281ae4059b7fd",
+      "bytes": 274204,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/default_out_sex.json",
+      "sha256": "9abecceda608e48a8e5fbfa0e3b0b486e5eea9c62053768e3bd7abf046de990e",
+      "bytes": 277192,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/gene_pairs/default_1Gene_pair.json",
+      "sha256": "a92424f4f40cf8361277cbb71babe0579207cf548ec769495a239a3af1184874",
+      "bytes": 193032,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/gene_pairs/default_2Gene_pair.json",
+      "sha256": "fa214ab15b6a56fe263d53af60d8557bb3bcfa41bb7686f34377a28bc0c250f0",
+      "bytes": 233273,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/gene_pairs/default_3Gene_pair.json",
+      "sha256": "cf3bfc0bec03e38168c09fbd4aabdecdf69ecb28d0869340cabaafce43d83de9",
+      "bytes": 273677,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/gene_pairs/default_4Gene_pair.json",
+      "sha256": "2e177a70284e7e90420744a5c61f1a9a3ce217eb84ba09652eb15d7ae44ea6b9",
+      "bytes": 314986,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/mutation_rate_post-fix/default_0.00001Mutation.json",
+      "sha256": "05a1ea4ecfefc5b12251bb812b9c2f2cadf6b0f262562a80cedb8fc168b56c0b",
+      "bytes": 268608,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/mutation_rate_post-fix/default_0.0001Mutation.json",
+      "sha256": "2b4cd7273ae1309098af93a0a67c8a6a1e7e2a4e3beb85779a9aa826117f00ca",
+      "bytes": 273038,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/mutation_rate_post-fix/default_0.001Mutation.json",
+      "sha256": "2d9b4db1ef5ac0d6850114f65ac8423f372c2223c9e6d026b1c1f9d4fb704ce4",
+      "bytes": 273674,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/mutation_rate_post-fix/default_0.01Mutation.json",
+      "sha256": "e950d8a470ece26d21a713f307f71e0df6844d95c4e1c6dc21a6caa00234fbee",
+      "bytes": 278167,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/mutation_rate_post-fix/default_0.1Mutation.json",
+      "sha256": "2d89a4a173450dc1c3999d94e8c2bfd9966f05d8e39b27ac75a091a775fdd713",
+      "bytes": 278945,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/noMutation_noCost_0.1ChStart.json",
+      "sha256": "6db970d62c036586cc930eded222ab72f1fc00606a7c43d4ca79da9371ba30e5",
+      "bytes": 149157,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/noMutation_noCost_0.1ResStart.json",
+      "sha256": "261c6f2d12d34b92c6c3371f80362a6e5c73740f9646c341df9e16aac5d66d39",
+      "bytes": 182121,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/noMutation_noCost_EqualStart.json",
+      "sha256": "1e3b3c6ec2baf1e0da6415ebd34cd7dcb182da62b5cb7227e1c8eeffde99748b",
+      "bytes": 208072,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/noMutation_noCost_EqualStart_noEpistasis.json",
+      "sha256": "ce913b8ebf30ee3f4d53f3de674c087ac196fd33f18ea9d1b69d6b3787f2d368",
+      "bytes": 206760,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/gene_pairs/no_epistasis_1Gene_pair.json",
+      "sha256": "c483b39b4f048f2ea50536f3af2ff2186b4101c826845b96e985db7437549dd7",
+      "bytes": 162984,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/gene_pairs/no_epistasis_2Gene_pair.json",
+      "sha256": "7ed6bec138be9e4c2e160651fca039da752ba58004ede54911840a6a753c2e7b",
+      "bytes": 235394,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/gene_pairs/no_epistasis_3Gene_pair.json",
+      "sha256": "b7720e25f7079a8983dfd8d13366644a990a9bdd036b7281a27becc43b5b7079",
+      "bytes": 276486,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/gene_pairs/no_epistasis_4Gene_pair.json",
+      "sha256": "b2d57a69203f5df482d0f7d865cf493448bfaf4419227ca3138d92d365c58d4a",
+      "bytes": 317288,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/mutation_rates/noEpistasis_0.00001MutationRate.json",
+      "sha256": "6f77fb4361d8acfff0c0378e245b65b8c1232ac83bc5c13c80edcf1832d12986",
+      "bytes": 268728,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/mutation_rates/noEpistasis_0.0001MutationRate.json",
+      "sha256": "c54270b11071a24b71f986af667ee43e2cda9d8d8bd307b6a28402e1136965d5",
+      "bytes": 273784,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/mutation_rates/noEpistasis_0.001MutationRate.json",
+      "sha256": "aa026646193d2cdd67ab86b88aea199ccfc89b0c8a6a1cc2c390ad9df9d740fc",
+      "bytes": 276381,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/mutation_rates/noEpistasis_0.01MutationRate.json",
+      "sha256": "ed279c710e824fb8f05b56e64d717f986d231cedd9b38afda1b2dab3106ecd2c",
+      "bytes": 277928,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/recomb_cycles/no_epistasis10Sex.json",
+      "sha256": "f55bf79e9881749b72abb1d17df02547482d1180b70711cf7be6c2bf4df7f652",
+      "bytes": 277844,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/recomb_cycles/no_epistasis_15Sex.json",
+      "sha256": "fb7572f54e30153aa9b9975e1730d59c1120aa9bc0115fa01f6135cbe10f6540",
+      "bytes": 277070,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/recomb_cycles/no_epistasis_20Sex.json",
+      "sha256": "a98199d14a99e4bfc24f7166a32ae7ae09fd09c36d4d7d75439a51d5124174b9",
+      "bytes": 276639,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/recomb_cycles/no_epistasis_5Sex.json",
+      "sha256": "9d88c69690ace5fde1c9368908b51bfd438682cfa23dd3b6e34599fd906260b3",
+      "bytes": 280327,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/recomb_rates/no_epistasis_0.25Recomb_10Sex.json",
+      "sha256": "524509db0790df275eb2c5c3b3231fae113b78b56403d457c2ef2b2ee05da726",
+      "bytes": 277979,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/recomb_rates/no_epistasis_0.5Recomb_10Sex.json",
+      "sha256": "ebad2af7b8032cfc69140f35153c18c6abdfc373a1fcfae224787f0d90eb3b48",
+      "bytes": 278162,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/recomb_rates/no_epistasis_0.75Recomb_10Sex.json",
+      "sha256": "e9e7f04aa6b4bcd801dcc1a76eb27fbd4e34f5dfdaf244dccc82727ff4527193",
+      "bytes": 278056,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/recomb_rates/no_epistasis_0Recomb_10Sex.json",
+      "sha256": "8fb53ed4e550c4379bd774be65401ff556c9a9baf1ea9d0f4ab677ae16dc2aaa",
+      "bytes": 278359,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/vegetative_costs/no_epistasis_0.001Cost.json",
+      "sha256": "6ce822ffbdb02e5ac645c595c73692ac67f003a07683b002a27f995a0496b338",
+      "bytes": 276207,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/vegetative_costs/no_epistasis_0.01Cost.json",
+      "sha256": "9dac5c8d04a62d67ad13660ccbaef5ff2a29c342c0b7ae5dffc61345a8d2a3ba",
+      "bytes": 276481,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/vegetative_costs/no_epistasis_0.1Cost.json",
+      "sha256": "4654e827876483b16f618268e8fcb668a6f201cfbd7fcede87228f7d6e0e8a86",
+      "bytes": 273623,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/no_epistasis/vegetative_costs/no_epistasis_0Cost.json",
+      "sha256": "93cba8b6b9fa8885b75467c62ec6cae062aefd2fcdd2ad354c9eb55b82c96102",
+      "bytes": 276186,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/quick/default_0.001Cost.json",
+      "sha256": "f13b41bc6d6015c379e862525bb29cf443eb9ff8e72984a26ffb6e254285cd2a",
+      "bytes": 274248,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/quick/default_0.01Cost.json",
+      "sha256": "aeba4ff37e03f8dcc8fb85b49fb3e46d65e08abdbc3dba0f81efe7fc7f62995b",
+      "bytes": 274200,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/quick/default_0.1Cost.json",
+      "sha256": "96845b84a27cbaf179282a8bf6207a12d921e335d71b7835494a025088c0b39c",
+      "bytes": 273673,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/quick/default_0Cost.json",
+      "sha256": "fc1d388627146ea756474c4cac622c7bc7c5bca277f5fa398726185039f43613",
+      "bytes": 274283,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/quick/fig1a_a.json",
+      "sha256": "ec8499afc1e6e5b2e08095034f49e0d1123b86c30ef3bc82ae61f38ce37103dc",
+      "bytes": 273763,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/quick/fig1a_b.json",
+      "sha256": "76b1438347a11049ac1acc50b3bf285a255cf5a89543daa90b2adf61345aa4fd",
+      "bytes": 277237,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/quick/fig1a_d.json",
+      "sha256": "f558f3e8ba98e1bfc097fe868ae6a9b9bd2cf4f0ee9f5c5f1391ba1df02867b0",
+      "bytes": 277796,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/quick/noEpistasis.json",
+      "sha256": "bfadbe54bba404dabd0bcece7647d10d52b1a22dd7ed1b82976ffa7d878bd4db",
+      "bytes": 276457,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/quick/no_cost.json",
+      "sha256": "e9a8821bebf88cb1e369462a7133102a3373b1732724b9bc0a28050f841a0b5f",
+      "bytes": 274669,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/recomb_cycles/default_10Sex.json",
+      "sha256": "72cfa23af5068bde099b136f8c7e15e8178b60402ab8203f16c8a742e4195dc5",
+      "bytes": 276512,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/recomb_cycles/default_15Sex.json",
+      "sha256": "bb1511f6241301cbbe2811a50ee57033feb5a1e6cc8eed5f2d79d6361f544914",
+      "bytes": 275701,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/recomb_cycles/default_20Sex.json",
+      "sha256": "9d9561d594b7941acc0e2dd032b2fd108aff7f748e62c0577f1a3b68cf376cb3",
+      "bytes": 274847,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/recomb_cycles/default_30Sex.json",
+      "sha256": "3741d5f61f628ad9b879822a549341ce3da7fc2126576facd547488ffcbc8e39",
+      "bytes": 274921,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/recomb_cycles/default_40Sex.json",
+      "sha256": "da1ac978faf75d30504e4fba91130895a8a2054e837aa343c6018134b3c6729e",
+      "bytes": 274866,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/recomb_cycles/default_5Sex.json",
+      "sha256": "26aae51f6bdfcb976567eee0d34f3682df66faea415c87da5ee2994b234226b3",
+      "bytes": 279477,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/recomb_rates/default_0.25Recomb_10Sex.json",
+      "sha256": "eb0e1f9610632b061fd2b65e9912aaee5b2ab51273d09cb5d7a4c2628613f135",
+      "bytes": 276621,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/recomb_rates/default_0.5Recomb_10Sex.json",
+      "sha256": "29214f6178842e0a9a8f74a6678b062f14f460844b81dff23a1aca7e198d3cf2",
+      "bytes": 276473,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/recomb_rates/default_0.75Recomb_10Sex.json",
+      "sha256": "1793136ce11979662e90849029fd6e317d324a15842eddec8ed8208f35ce84d3",
+      "bytes": 276001,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/recomb_rates/default_0Recomb_10Sex.json",
+      "sha256": "c50db5c63e732fdb875262e0686539c79644cd786972c8406e41f90757ca5c00",
+      "bytes": 276478,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/resistor_solo_costs.json",
+      "sha256": "0e62be0499178916485e772b800ccd82788c9e245ce99a22961113b8c45abd82",
+      "bytes": 193856,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/semi_epistasis/allEpistasis.json",
+      "sha256": "be2100bbfd70de41430b13815349e88eddd75e1326219ac6b8a256f5c493a22f",
+      "bytes": 274082,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/semi_epistasis/chEpistasis.json",
+      "sha256": "51720b87bd6b03da942f3c09f2553962571d45ff4f36594fcc93544ebeb5fca0",
+      "bytes": 274996,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/semi_epistasis/noEpistasis.json",
+      "sha256": "0df31b8f165dce32d1f9deaa122528d59c52537616914e47c9298be634ef3b57",
+      "bytes": 273989,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/semi_epistasis/resEpistasis.json",
+      "sha256": "81bb18071574b8df2c633a36fd8245a555c98c9fcded10098c331ac495fbb4f6",
+      "bytes": 276729,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/small_mutation.json",
+      "sha256": "a5c63afc6a5610a925085aa018fd9b74d9f7363e87d6d9dd427d318f8760b86b",
+      "bytes": 256014,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/test_lowMutation_single.json",
+      "sha256": "758925f2702581f602b97c398e50d76ef64b69b90aed5e30688457b879b8d182",
+      "bytes": 128290,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/vegetative_costs/default_0.001Cost.json",
+      "sha256": "7c313584cd83f7212cdab3c1fd9c0854988b446a0c5a0d3d84a6c71fe6497354",
+      "bytes": 274218,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/vegetative_costs/default_0.01Cost.json",
+      "sha256": "27b492d4d691ec497c22515ee4a8d535c6efb80d0e5f69ccaa82f38a25b30677",
+      "bytes": 273635,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/vegetative_costs/default_0.1Cost.json",
+      "sha256": "11b413a30603557c87dfef1c369a84d06b8b16946b0ea04dec8f14941ebe917b",
+      "bytes": 273583,
+      "snapshot": false
+    },
+    {
+      "path": "data_files/vegetative_costs/default_0Cost.json",
+      "sha256": "03949769516bf01193a43edcf4e6b5ffd663ece522ca345305d6d5c08519fac2",
+      "bytes": 274558,
+      "snapshot": false
+    },
+    {
+      "path": "dicty_sim_test_env.py",
+      "sha256": "7638ecf8f59ee28a56a6ea288025d75529437b99b188757b6b52f2855f9c7d3a",
+      "bytes": 43719,
+      "snapshot": true
+    },
+    {
+      "path": "dicty_sim_v0.6.py",
+      "sha256": "c03f19fb64ae0985ea4b62266d4568a3f865cb57a0183550112f43baed85b6ce",
+      "bytes": 48737,
+      "snapshot": true
+    },
+    {
+      "path": "directory_run.py",
+      "sha256": "92cede828356bbdca89f6ac8cadc54b516c4c2ecb29be6cae9e3c4d16d34e63d",
+      "bytes": 897,
+      "snapshot": true
+    },
+    {
+      "path": "figure_maker.py",
+      "sha256": "6a5efd5675fb7618ead78d20325956e8fe49c66ee7ca7b08f93de0e5a108d6ce",
+      "bytes": 6313,
+      "snapshot": true
+    },
+    {
+      "path": "global_variables.py",
+      "sha256": "f247ef2b355a83c67091245de26cf485e1c22cc9a17a20648a4dd66a882691fd",
+      "bytes": 712,
+      "snapshot": true
+    },
+    {
+      "path": "grapher.py",
+      "sha256": "02d87960fcb27f9cb294416ae615306ce3adf02901cd02d18356d8808b8061a0",
+      "bytes": 6284,
+      "snapshot": true
+    },
+    {
+      "path": "import_template.json",
+      "sha256": "676c92b0bcfcabd7eda308d99bb9cdb108208e6afcff82b1884524455089d6fd",
+      "bytes": 622,
+      "snapshot": true
+    },
+    {
+      "path": "locus.py",
+      "sha256": "a0f59c58e3b6f8af8f5e249be4fa537faf9aecfa6c46fc90a36df8682f34746b",
+      "bytes": 320,
+      "snapshot": true
+    },
+    {
+      "path": "locus_tracker.py",
+      "sha256": "3035eadd5004189b0600c59991cf3a9bebe7f0f609bb2e31dadd7c3ba6eea450",
+      "bytes": 329,
+      "snapshot": true
+    },
+    {
+      "path": "mac_reqs.txt",
+      "sha256": "c43aaf4d31396f44c58d281302a1777cb697049dde14cdf3786efd356b74124b",
+      "bytes": 444,
+      "snapshot": true
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "6821a7211efa5e8e0239904b84a13b22b7f717b7b6dd94a825c39f853953a033",
+      "bytes": 2160,
+      "snapshot": true
+    },
+    {
+      "path": "resOnly_0.00001Mutation.json",
+      "sha256": "9a0e74f7184bdab6b18d6e45567098bee4b9e392bf816d7fa346232344d2ea3d",
+      "bytes": 192087,
+      "snapshot": false
+    },
+    {
+      "path": "resOnly_0.0001Mutation.json",
+      "sha256": "2c9b6faedad3cf7dab4f7b2afcb4266dcfa06c5ea163d9bd3973be4cbcfb0bf1",
+      "bytes": 193173,
+      "snapshot": false
+    },
+    {
+      "path": "resOnly_0.001Mutation.json",
+      "sha256": "e94967a37a89a4a768f8018574b8c4005ac81623921dc816f51740a0a72dcc26",
+      "bytes": 193886,
+      "snapshot": false
+    },
+    {
+      "path": "resOnly_0.005Cost.json",
+      "sha256": "0c9b8f2f10b2770d413ada8d618ccd08703805c9b8fe322555d76873655d224a",
+      "bytes": 193537,
+      "snapshot": false
+    },
+    {
+      "path": "resOnly_0.01Cost.json",
+      "sha256": "15ccff675a3fe186898efff5fca9d9e4b5b73938722c7a290532eb08b610b7f8",
+      "bytes": 193851,
+      "snapshot": false
+    },
+    {
+      "path": "resOnly_0.01Mutation.json",
+      "sha256": "104af2b77ea442377b5269e4654d8ef168e63e230e74c5f2a3f11d112d266f14",
+      "bytes": 194059,
+      "snapshot": false
+    },
+    {
+      "path": "resOnly_0.02Cost.json",
+      "sha256": "d7dfc766dfc39169fa680875fefd8ea805a1a7c3087a196eeaa8a363f8ecd601",
+      "bytes": 193742,
+      "snapshot": false
+    },
+    {
+      "path": "resOnly_0.04Cost.json",
+      "sha256": "a91817d553a9881b1dc52c1bddfe031499715529907a63d7ab1ce93e2f7c79a2",
+      "bytes": 192466,
+      "snapshot": false
+    },
+    {
+      "path": "same_graph.py",
+      "sha256": "92c2e14bd4fd30b6270c1ce3f9fd8dada830796f09632e0673d4a104ff476798",
+      "bytes": 3316,
+      "snapshot": true
+    },
+    {
+      "path": "temp_lowmutation/temp1/default_0.001chGerm.json",
+      "sha256": "06e7acd5f6101c74ad6e34cb6b515a2139d63254b567b3cbe285aa41ab2f9517",
+      "bytes": 630,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp1/default_0.01chGerm.json",
+      "sha256": "fa62616ecab02c75714be23e6d4c7228ecf4311ac966aff4c1bda0f8638c37ed",
+      "bytes": 628,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp1/default_0.1chGerm.json",
+      "sha256": "da058d605c7af2996cabb34cca9403f04a49d8bf90e7443e67e7413f403fd03d",
+      "bytes": 626,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp1/default_1chGerm.json",
+      "sha256": "7e16d72134f885ed7b7ca6f2c9f1ff3acdaa5340a01794ba244c663322e6ee76",
+      "bytes": 622,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp1/noMutation_noCost_0.1ChStart.json",
+      "sha256": "864bc8d4d53d0fc8e1a7cf8445d03f88986776dfa0a0febb657c8293f038efae",
+      "bytes": 623,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp1/noMutation_noCost_0.1ResStart.json",
+      "sha256": "3208850948ce27d411fead7944e3297dae34dac70ce6b6f7354afb6db7f3d2c3",
+      "bytes": 624,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp1/noMutation_noCost_EqualStart.json",
+      "sha256": "73288962159cf90da6a12a57cdf8c7a0c9d46705f48a6eed6f5c6888833f905c",
+      "bytes": 623,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp1/noMutation_noCost_EqualStart_no_epistasis.json",
+      "sha256": "0f3df1325183446916754c0fda775612450767d605084935ac7c9f4ef04f1f65",
+      "bytes": 631,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp2/a_default_all.json",
+      "sha256": "e4f0a526ea4679541bf14938fa2e78a29610594a3fab59e1e6a30a7eebbe5fd4",
+      "bytes": 616,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp2/b_default_all_sex.json",
+      "sha256": "7ceafc0b000e4bb3f661f18fa8893da03317a6079ba7ec7b65dd56edf558f263",
+      "bytes": 617,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp2/c_default_all_noEpistasis.json",
+      "sha256": "ba7852367c312e3b9883e1442973de42d21343189351465b2e3607b718371c8e",
+      "bytes": 612,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp2/d_default_all_noEpistasis_sex.json",
+      "sha256": "699b98f8ff3d3d28cd7753d477edcaf365391a32a07991293beb33bf05bd8585",
+      "bytes": 613,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp2/import_1Gene_pair.json",
+      "sha256": "d405deadf465ba28ffe8249169de120b2fb818bad15aeea634dbb66abe03a7f1",
+      "bytes": 627,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp2/import_2Gene_pair.json",
+      "sha256": "701061cd23f9647b695bb3a31593ae70248d372f60a268fba3157d7f0cce3f84",
+      "bytes": 627,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp2/import_3Gene_pair.json",
+      "sha256": "cb66ac618c8c977991cfcb53bc10c6323ec916d846fb20ed43a020a15e0daabb",
+      "bytes": 627,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp2/import_4Gene_pair.json",
+      "sha256": "eb506ebaf90dbe24b676428120467727134ab1fb812a9224779ef5e14bdced3e",
+      "bytes": 627,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp3/allEpistasis.json",
+      "sha256": "edb5db9128eca27c0d63dacbdfd116713b3cb2eba184081f644b1cac5ed29071",
+      "bytes": 621,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp3/chEpistasis.json",
+      "sha256": "0969da3201950e9179bcc112e5c89cf9c1ea3df39ede0e6d928e4bd6dce230fe",
+      "bytes": 618,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp3/import_0.25recomb_10Sex.json",
+      "sha256": "2d6eec1efd1e182900947b746ce10e5d080f256caf843c0a1ce11938ec979b0a",
+      "bytes": 575,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp3/import_0.5recomb_10Sex.json",
+      "sha256": "5b47cf9b4a3a2f90584c9813804dcb81919557b9d27f4533721b4dc88b756415",
+      "bytes": 573,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp3/import_0.75recomb_10Sex.json",
+      "sha256": "00a6d57a13b78e117562905bfb6d892cb9cb08c3f4424a223bc5c2e349944c23",
+      "bytes": 575,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp3/import_0recomb_10Sex.json",
+      "sha256": "e80cb406cdd1bab6a2f9f53e49d2a5fff0221d736072cbae851f22f8ba77fd40",
+      "bytes": 569,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp3/noEpistasis.json",
+      "sha256": "6795392e183f3b247a5ac6fff549224ac72a8acc2ac458fc9d01eaf2f1130c66",
+      "bytes": 616,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp3/resEpistasis.json",
+      "sha256": "ab19e706abca41c62686aaefa7f4627cc1609705cd33f05cc749c78e46ec174f",
+      "bytes": 617,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp4/import_0.001Costs.json",
+      "sha256": "321d51a130927374ba16970f515aa49dd82f7905bca2f748505017eb59850dfc",
+      "bytes": 568,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp4/import_0.01Costs.json",
+      "sha256": "68c1dc99c2b582ce646b08d5f496fc80f0f23b6d25c57b2dd72f3640e49d259a",
+      "bytes": 565,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp4/import_0.1Costs.json",
+      "sha256": "af75adfc8d01d6fb4aa330650ad1deeeaeedce83039d3b461c9d6ed815e7068a",
+      "bytes": 562,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp4/import_0Costs.json",
+      "sha256": "7e705f346d3a0724e3ffa1c3f7decc543b0653b55054f598f87d8f8ab8869d7e",
+      "bytes": 556,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp4/import_20Sex.json",
+      "sha256": "bafd01260393c0a6b63b611f754b37a285fbacb4b24114fbbe3efacf91295f28",
+      "bytes": 563,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp4/import_30Sex.json",
+      "sha256": "2eea83156eb056200ee580365a277babed25fc545b3ad60ad6a02566255ee8df",
+      "bytes": 563,
+      "snapshot": false
+    },
+    {
+      "path": "temp_lowmutation/temp4/import_40Sex.json",
+      "sha256": "69ad62841244e107c26dcbd2a2928309551b9153b3d6d83a02da844683da1ba4",
+      "bytes": 563,
+      "snapshot": false
+    },
+    {
+      "path": "test.py",
+      "sha256": "e1e8b7681210d94af9817f5ecefba16d15c2cec2742c5d4df652f1900020a0db",
+      "bytes": 114,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/chGerm_penalties/default_0.001chGerm.json",
+      "sha256": "06e7acd5f6101c74ad6e34cb6b515a2139d63254b567b3cbe285aa41ab2f9517",
+      "bytes": 630,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/chGerm_penalties/default_0.01chGerm.json",
+      "sha256": "fa62616ecab02c75714be23e6d4c7228ecf4311ac966aff4c1bda0f8638c37ed",
+      "bytes": 628,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/chGerm_penalties/default_0.1chGerm.json",
+      "sha256": "da058d605c7af2996cabb34cca9403f04a49d8bf90e7443e67e7413f403fd03d",
+      "bytes": 626,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/chGerm_penalties/default_1chGerm.json",
+      "sha256": "7e16d72134f885ed7b7ca6f2c9f1ff3acdaa5340a01794ba244c663322e6ee76",
+      "bytes": 622,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/control_noMutations/noMutation_noCost_0.1ChStart.json",
+      "sha256": "864bc8d4d53d0fc8e1a7cf8445d03f88986776dfa0a0febb657c8293f038efae",
+      "bytes": 623,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/control_noMutations/noMutation_noCost_0.1ResStart.json",
+      "sha256": "3208850948ce27d411fead7944e3297dae34dac70ce6b6f7354afb6db7f3d2c3",
+      "bytes": 624,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/control_noMutations/noMutation_noCost_EqualStart.json",
+      "sha256": "73288962159cf90da6a12a57cdf8c7a0c9d46705f48a6eed6f5c6888833f905c",
+      "bytes": 623,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/control_noMutations/noMutation_noCost_EqualStart_no_epistasis.json",
+      "sha256": "0f3df1325183446916754c0fda775612450767d605084935ac7c9f4ef04f1f65",
+      "bytes": 631,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/fig1a/a_default_all.json",
+      "sha256": "e4f0a526ea4679541bf14938fa2e78a29610594a3fab59e1e6a30a7eebbe5fd4",
+      "bytes": 616,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/fig1a/b_default_all_sex.json",
+      "sha256": "7ceafc0b000e4bb3f661f18fa8893da03317a6079ba7ec7b65dd56edf558f263",
+      "bytes": 617,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/fig1a/c_default_all_noEpistasis.json",
+      "sha256": "ba7852367c312e3b9883e1442973de42d21343189351465b2e3607b718371c8e",
+      "bytes": 612,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/fig1a/d_default_all_noEpistasis_sex.json",
+      "sha256": "699b98f8ff3d3d28cd7753d477edcaf365391a32a07991293beb33bf05bd8585",
+      "bytes": 613,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/gene_pairs/import_1Gene_pair.json",
+      "sha256": "d405deadf465ba28ffe8249169de120b2fb818bad15aeea634dbb66abe03a7f1",
+      "bytes": 627,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/gene_pairs/import_2Gene_pair.json",
+      "sha256": "701061cd23f9647b695bb3a31593ae70248d372f60a268fba3157d7f0cce3f84",
+      "bytes": 627,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/gene_pairs/import_3Gene_pair.json",
+      "sha256": "cb66ac618c8c977991cfcb53bc10c6323ec916d846fb20ed43a020a15e0daabb",
+      "bytes": 627,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/gene_pairs/import_4Gene_pair.json",
+      "sha256": "eb506ebaf90dbe24b676428120467727134ab1fb812a9224779ef5e14bdced3e",
+      "bytes": 627,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/mutationRates/import_0.00001MutationRate.json",
+      "sha256": "2c61bd93fd3395f688c9b0e4a16f86b5809888b5cdcdee9aec7a67e136c7d880",
+      "bytes": 640,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/mutationRates/import_0.0001MutationRate.json",
+      "sha256": "cd36cb57de4103caa6d06f7b3861eba77834b37efcd09a400b1028d8d7a25dac",
+      "bytes": 637,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/mutationRates/import_0.01MutationRate.json",
+      "sha256": "69cfa64f661155f3b61a049510866b1bc7ad31231b6dc18945fc87383780fdb2",
+      "bytes": 631,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/mutationRates/import__0.001MutationRate.json",
+      "sha256": "10aea536495626a3e731a1262f99689fe3f0b97be23ad56655badd91d388d8f3",
+      "bytes": 634,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/gene_pairs/import_1Gene_pair.json",
+      "sha256": "683dd4b9de2d9b24cc155f6a9952075fe651f92c01cd3bc46140b297d16ed7ed",
+      "bytes": 628,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/gene_pairs/import_2Gene_pair.json",
+      "sha256": "4009c53f746416ac6f19998221539fcc0f341c9f48825187e3fb2d31c895e639",
+      "bytes": 628,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/gene_pairs/import_3Gene_pair.json",
+      "sha256": "0430b0450787c1e8ee23e25b3a2a9b0d677611bb398d29b513edec479fb5f5af",
+      "bytes": 628,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/gene_pairs/import_4Gene_pair.json",
+      "sha256": "39ceeeb56d7d368ba5f9e2c302e9b60f7dcb8acb1aa65284573f4203bfbac74e",
+      "bytes": 628,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/mutation/import_0.00001MutationRate.json",
+      "sha256": "3e49ba6b1b0ecc28fbfc1ea327f360d4320584f65ff5920050e8cfbdd2009b67",
+      "bytes": 640,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/mutation/import_0.0001MutationRate.json",
+      "sha256": "078ef7f132febfe6b78cbafe01099a32d19de42ee78d172bc42c28b9edebeb18",
+      "bytes": 637,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/mutation/import_0.001MutationRate.json",
+      "sha256": "d097a567d79d0850e423add0c025c19d16d4e3977bb46ee75327e82f8a2f45c4",
+      "bytes": 634,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/mutation/import_0.01MutationRate.json",
+      "sha256": "d45874d3715b37f3c6acf0047002add02b4f2f8fff9410ca703082081fc5cfb2",
+      "bytes": 631,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/recomb_chance/import_0.25recomb_10Sex.json",
+      "sha256": "d02508a1dbf859201b2b5d9a882fc94081230f8f133725f6216776c0ab19b604",
+      "bytes": 576,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/recomb_chance/import_0.5recomb_10Sex.json",
+      "sha256": "7ae4ca1571eea1ebdcc0859001c687bd76fab09164b500fa35d24e69f2430282",
+      "bytes": 574,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/recomb_chance/import_0.75recomb_10Sex.json",
+      "sha256": "7ae13cf85a5ba04bcc3b3dd83f9bdb896619c061159846ace3cbe6df8795f582",
+      "bytes": 576,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/recomb_chance/import_0recomb_10Sex.json",
+      "sha256": "1c6ecbde2ffd90b44a80d8ba54c98bfb21cc4f925c3258a50bfbb76071bb7019",
+      "bytes": 570,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/sex_cycle_intervals/import_15Sex.json",
+      "sha256": "83a72b29e1bc06cf6974e2ffec3d6e64452a8ba7651dd2fc5bbb30f75aafcf43",
+      "bytes": 564,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/sex_cycle_intervals/import_20Sex.json",
+      "sha256": "7e272dffcbadc36daa66e102ef55eb890f623f260d203f14cbd7e5ba848f4f5a",
+      "bytes": 564,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/sex_cycle_intervals/import_5Sex.json",
+      "sha256": "32e7679beaa637268aa194a41d0a5fc977c43ab040154f4103d808e3a84e2484",
+      "bytes": 562,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/vegetative_costs/import_0.001Costs.json",
+      "sha256": "13cbcc8da72b4e5ccc719e5ccf88115cda471d3704355ab38076532edb845888",
+      "bytes": 569,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/vegetative_costs/import_0.01Costs.json",
+      "sha256": "bc2c490eb19ba30eaf224b22c761f5581488ed4aedaced1c808203d0efe6816d",
+      "bytes": 566,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/vegetative_costs/import_0.1Costs.json",
+      "sha256": "0e16ec1e688b2314e6ee6c674e663745b62766dfd1317881e2fb1fb91cc091e2",
+      "bytes": 563,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/no_epistasis/vegetative_costs/import_0Costs.json",
+      "sha256": "45684c270c2b03d843a9899cb3fc7bc8708e8d943924ff272301947b4683ca26",
+      "bytes": 557,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/recomb_chance/import_0.25recomb_10Sex.json",
+      "sha256": "2d6eec1efd1e182900947b746ce10e5d080f256caf843c0a1ce11938ec979b0a",
+      "bytes": 575,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/recomb_chance/import_0.5recomb_10Sex.json",
+      "sha256": "5b47cf9b4a3a2f90584c9813804dcb81919557b9d27f4533721b4dc88b756415",
+      "bytes": 573,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/recomb_chance/import_0.75recomb_10Sex.json",
+      "sha256": "00a6d57a13b78e117562905bfb6d892cb9cb08c3f4424a223bc5c2e349944c23",
+      "bytes": 575,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/recomb_chance/import_0recomb_10Sex.json",
+      "sha256": "e80cb406cdd1bab6a2f9f53e49d2a5fff0221d736072cbae851f22f8ba77fd40",
+      "bytes": 569,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/semi_epistasis/allEpistasis.json",
+      "sha256": "edb5db9128eca27c0d63dacbdfd116713b3cb2eba184081f644b1cac5ed29071",
+      "bytes": 621,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/semi_epistasis/chEpistasis.json",
+      "sha256": "0969da3201950e9179bcc112e5c89cf9c1ea3df39ede0e6d928e4bd6dce230fe",
+      "bytes": 618,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/semi_epistasis/noEpistasis.json",
+      "sha256": "6795392e183f3b247a5ac6fff549224ac72a8acc2ac458fc9d01eaf2f1130c66",
+      "bytes": 616,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/semi_epistasis/resEpistasis.json",
+      "sha256": "ab19e706abca41c62686aaefa7f4627cc1609705cd33f05cc749c78e46ec174f",
+      "bytes": 617,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/sex_cycle_intervals/import_20Sex.json",
+      "sha256": "bafd01260393c0a6b63b611f754b37a285fbacb4b24114fbbe3efacf91295f28",
+      "bytes": 563,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/sex_cycle_intervals/import_30Sex.json",
+      "sha256": "2eea83156eb056200ee580365a277babed25fc545b3ad60ad6a02566255ee8df",
+      "bytes": 563,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/sex_cycle_intervals/import_40Sex.json",
+      "sha256": "69ad62841244e107c26dcbd2a2928309551b9153b3d6d83a02da844683da1ba4",
+      "bytes": 563,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/stableLevel/resOnly_0.005Cost.json",
+      "sha256": "3e8b2acc1b171f62aba98f21efa30d143786ba31e3d3d3a8834b60b4e9cd0132",
+      "bytes": 623,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/stableLevel/resOnly_0.01Cost.json",
+      "sha256": "8f0fda9be0b9a2a8bc30f16ee2a2713411c8029381f42ed1e31302bfce83d1ed",
+      "bytes": 621,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/stableLevel/resOnly_0.02.json",
+      "sha256": "2b0da2609fcd1d1bbb3da39e2778fbb0503f38f7a07a9d0d0b32a3aa2136790d",
+      "bytes": 621,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/stableLevel/resOnly_0.04.json",
+      "sha256": "de5f5a346d72e35af36ba530e9ee93eb9bba2a822fc48ea1f7981a883b445088",
+      "bytes": 621,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/stableLevel_mut/resOnly_0.00001Mutation_import.json",
+      "sha256": "0be38193117189ab98fa6527ede5c9583a466a259481761f4761d98439642822",
+      "bytes": 630,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/stableLevel_mut/resOnly_0.0001Mutation_import.json",
+      "sha256": "bdf2bfd3924df8ea3f40f33add9e13b51914331a4e51e9b09cf765408470e217",
+      "bytes": 628,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/stableLevel_mut/resOnly_0.001Mutation_import.json",
+      "sha256": "d71b5bbae31c7a008da1372aa7b3240c8369727485a5b51363d80757bea15574",
+      "bytes": 626,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/stableLevel_mut/resOnly_0.01Mutation_import.json",
+      "sha256": "4a9ae07d447ae72b7be0ba0aaf37a55c0bbca4bb1dd3c61d71a5d0d5db9fa7db",
+      "bytes": 624,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/vegetative_costs/import_0.001Costs.json",
+      "sha256": "321d51a130927374ba16970f515aa49dd82f7905bca2f748505017eb59850dfc",
+      "bytes": 568,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/vegetative_costs/import_0.01Costs.json",
+      "sha256": "68c1dc99c2b582ce646b08d5f496fc80f0f23b6d25c57b2dd72f3640e49d259a",
+      "bytes": 565,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/vegetative_costs/import_0.1Costs.json",
+      "sha256": "af75adfc8d01d6fb4aa330650ad1deeeaeedce83039d3b461c9d6ed815e7068a",
+      "bytes": 562,
+      "snapshot": true
+    },
+    {
+      "path": "test_params/vegetative_costs/import_0Costs.json",
+      "sha256": "7e705f346d3a0724e3ffa1c3f7decc543b0653b55054f598f87d8f8ab8869d7e",
+      "bytes": 556,
+      "snapshot": true
+    }
+  ]
+}

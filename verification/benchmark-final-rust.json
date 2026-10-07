@@ -1,0 +1,183 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "recorded_utc": "2026-10-07T10:00:34.724424+00:00",
+  "engine_sha256": "582505ce2115637d39012bf75d8401e1cd20a97855d408f92533ae78848909bc",
+  "source_sha256": "7638ecf8f59ee28a56a6ea288025d75529437b99b188757b6b52f2855f9c7d3a",
+  "logical_cpus": 24,
+  "method": "Fresh process wall time; progress to log; peak process-tree working set sampled every 10ms. Includes process startup, imports, and aggregation. Python and Rust use different random generators.",
+  "cycles": 50,
+  "repeats": 1,
+  "samples": 3,
+  "workers": 1,
+  "cases": {
+    "ordinary": {
+      "parameters": {
+        "n_runs": 1,
+        "n_dev": 50,
+        "i_macrocyst": [
+          0
+        ],
+        "sex_cycle_interval": 0,
+        "vg": 10,
+        "n": 10000,
+        "sl": 1000,
+        "sp": 0.8,
+        "m_ch": 0.001,
+        "m_re": 0.001,
+        "c_ch": 0.01,
+        "c_res": 0.01,
+        "ch_germ": 0.0,
+        "c_ch_res": 0.0,
+        "ch_start": 0.0,
+        "res_start": 0.0,
+        "ch_res_dist": 1,
+        "ch_eff_rc": 0.0,
+        "res_eff_rc": 0.0,
+        "mc_count": 100,
+        "mc_germ_count": 100,
+        "recomb_chance": 1.0,
+        "mt1_start": 0.5,
+        "mt2_start": 0.5,
+        "mt3_start": 0.0,
+        "output_filepath": "",
+        "resistance_type": 1.0,
+        "gene_pairs": 3,
+        "discrete_res": 1.0,
+        "ch_self_cheat": 0,
+        "confidence_interval": 0.95
+      },
+      "rust": [
+        {
+          "seconds": 0.5168095999979414,
+          "peak_working_set_bytes": 14991360,
+          "log": "build\\benchmarks\\1791367234144441900\\ordinary-rust-0.log"
+        },
+        {
+          "seconds": 0.5100530999989132,
+          "peak_working_set_bytes": 14987264,
+          "log": "build\\benchmarks\\1791367234144441900\\ordinary-rust-1.log"
+        },
+        {
+          "seconds": 0.5178172000014456,
+          "peak_working_set_bytes": 14987264,
+          "log": "build\\benchmarks\\1791367234144441900\\ordinary-rust-2.log"
+        }
+      ],
+      "python": [],
+      "rust_median_seconds": 0.5168095999979414
+    },
+    "sex-heavy": {
+      "parameters": {
+        "n_runs": 1,
+        "n_dev": 50,
+        "i_macrocyst": [
+          0
+        ],
+        "sex_cycle_interval": 2,
+        "vg": 10,
+        "n": 10000,
+        "sl": 1000,
+        "sp": 0.8,
+        "m_ch": 0.001,
+        "m_re": 0.001,
+        "c_ch": 0.01,
+        "c_res": 0.01,
+        "ch_germ": 0.0,
+        "c_ch_res": 0.0,
+        "ch_start": 0.3,
+        "res_start": 0.2,
+        "ch_res_dist": 1,
+        "ch_eff_rc": 0.0,
+        "res_eff_rc": 0.0,
+        "mc_count": 100,
+        "mc_germ_count": 100,
+        "recomb_chance": 1.0,
+        "mt1_start": 0.5,
+        "mt2_start": 0.5,
+        "mt3_start": 0.0,
+        "output_filepath": "",
+        "resistance_type": 1.0,
+        "gene_pairs": 3,
+        "discrete_res": 1.0,
+        "ch_self_cheat": 0,
+        "confidence_interval": 0.95
+      },
+      "rust": [
+        {
+          "seconds": 0.5944308000034653,
+          "peak_working_set_bytes": 15142912,
+          "log": "build\\benchmarks\\1791367234144441900\\sex-heavy-rust-0.log"
+        },
+        {
+          "seconds": 0.58022119999805,
+          "peak_working_set_bytes": 15396864,
+          "log": "build\\benchmarks\\1791367234144441900\\sex-heavy-rust-1.log"
+        },
+        {
+          "seconds": 0.5994874999960302,
+          "peak_working_set_bytes": 15417344,
+          "log": "build\\benchmarks\\1791367234144441900\\sex-heavy-rust-2.log"
+        }
+      ],
+      "python": [],
+      "rust_median_seconds": 0.5944308000034653
+    },
+    "higher-locus": {
+      "parameters": {
+        "n_runs": 1,
+        "n_dev": 50,
+        "i_macrocyst": [
+          0
+        ],
+        "sex_cycle_interval": 0,
+        "vg": 10,
+        "n": 10000,
+        "sl": 1000,
+        "sp": 0.8,
+        "m_ch": 0.001,
+        "m_re": 0.001,
+        "c_ch": 0.01,
+        "c_res": 0.01,
+        "ch_germ": 0.0,
+        "c_ch_res": 0.0,
+        "ch_start": 0.3,
+        "res_start": 0.2,
+        "ch_res_dist": 1,
+        "ch_eff_rc": 0.0,
+        "res_eff_rc": 0.0,
+        "mc_count": 100,
+        "mc_germ_count": 100,
+        "recomb_chance": 1.0,
+        "mt1_start": 0.5,
+        "mt2_start": 0.5,
+        "mt3_start": 0.0,
+        "output_filepath": "",
+        "resistance_type": 1.0,
+        "gene_pairs": 12,
+        "discrete_res": 1.0,
+        "ch_self_cheat": 0,
+        "confidence_interval": 0.95
+      },
+      "rust": [
+        {
+          "seconds": 0.8018499999961932,
+          "peak_working_set_bytes": 14938112,
+          "log": "build\\benchmarks\\1791367234144441900\\higher-locus-rust-0.log"
+        },
+        {
+          "seconds": 0.8049463999996078,
+          "peak_working_set_bytes": 14929920,
+          "log": "build\\benchmarks\\1791367234144441900\\higher-locus-rust-1.log"
+        },
+        {
+          "seconds": 0.8017340000005788,
+          "peak_working_set_bytes": 14934016,
+          "log": "build\\benchmarks\\1791367234144441900\\higher-locus-rust-2.log"
+        }
+      ],
+      "python": [],
+      "rust_median_seconds": 0.8018499999961932
+    }
+  }
+}

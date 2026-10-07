@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Sim",
+            "type": "debugpy",
+            "python": "${workspaceFolder}/venv/Scripts/python.exe",
+            "request": "launch",
+            "program": "${workspaceFolder}/dicty_sim_v0.6.py",
+            "console": "integratedTerminal"
+        }
+    ]}

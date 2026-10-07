@@ -1,0 +1,62 @@
+{
+  "parameters": {
+    "n_runs": 10,
+    "n_dev": 500,
+    "i_macrocyst": [
+      0
+    ],
+    "sex_cycle_interval": 0,
+    "vg": 10,
+    "n": 10000,
+    "sl": 1000,
+    "sp": 0.8,
+    "m_ch": 0.001,
+    "m_re": 0.001,
+    "c_ch": 0.01,
+    "c_res": 0.01,
+    "ch_germ": 0.0,
+    "c_ch_res": 0.0,
+    "ch_start": 0.0,
+    "res_start": 0.0,
+    "ch_res_dist": 1,
+    "ch_eff_rc": 0.0,
+    "res_eff_rc": 0.0,
+    "mc_count": 100,
+    "mc_germ_count": 100,
+    "recomb_chance": 1.0,
+    "mt1_start": 0.5,
+    "mt2_start": 0.5,
+    "mt3_start": 0.0,
+    "output_filepath": "",
+    "resistance_type": 1.0,
+    "gene_pairs": 3,
+    "discrete_res": 1.0,
+    "ch_self_cheat": 0,
+    "confidence_interval": 0.95
+  },
+  "seed": 20261007,
+  "engine_sha256": "582505ce2115637d39012bf75d8401e1cd20a97855d408f92533ae78848909bc",
+  "runs": [
+    {
+      "seconds": 47.89499919999798,
+      "peak_working_set_bytes": 17993728,
+      "log": "build\\full-workload\\1791367133243114100\\serial.log",
+      "mode": "serial",
+      "workers": 1,
+      "result_sha256": "a692c9549e15e4be6772e17d0857025fba45ad418819c7f88ce12703ca924c1b",
+      "result_bytes": 256156,
+      "result_points": 501
+    },
+    {
+      "seconds": 5.99875950000569,
+      "peak_working_set_bytes": 25600000,
+      "log": "build\\full-workload\\1791367133243114100\\parallel.log",
+      "mode": "parallel",
+      "workers": 10,
+      "result_sha256": "a692c9549e15e4be6772e17d0857025fba45ad418819c7f88ce12703ca924c1b",
+      "result_bytes": 256156,
+      "result_points": 501
+    }
+  ],
+  "identical_result_bytes": true
+}

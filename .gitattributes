@@ -1,0 +1,3 @@
+# Preserve the byte-for-byte reference snapshot and its recorded SHA-256 hashes.
+reference-source/** -text
+verification/check_source_behavior.py -text

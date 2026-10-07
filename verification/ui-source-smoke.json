@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "engine_path": "C:\\Dev\\Dicty sim\\rust-sim\\target\\release\\dicty-sim.exe",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Dev\\Dicty sim\\rust-sim\\.venv-build\\Scripts\\python.exe",
+  "frozen": false,
+  "cwd": "C:\\Dev\\Dicty sim\\rust-sim",
+  "errors": [],
+  "heartbeats": 4,
+  "modules": {
+    "numpy": {
+      "version": "1.26.4",
+      "path": "C:\\Dev\\Dicty sim\\rust-sim\\.venv-build\\Lib\\site-packages\\numpy\\__init__.py"
+    },
+    "matplotlib": {
+      "version": "3.8.4",
+      "path": "C:\\Dev\\Dicty sim\\rust-sim\\.venv-build\\Lib\\site-packages\\matplotlib\\__init__.py"
+    },
+    "tkinter": {
+      "version": 8.6,
+      "path": "C:\\Users\\ScottM\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\tkinter\\__init__.py"
+    }
+  },
+  "result_keys": [
+    "parameters",
+    "sex_cycle_list",
+    "x_axis_values",
+    "mean_ch",
+    "ch_ci",
+    "mean_res",
+    "res_ci",
+    "mean_wild",
+    "wild_ci",
+    "mean_mt1",
+    "mt1_ci",
+    "mean_mt2",
+    "mt2_ci",
+    "mean_mt3",
+    "mt3_ci",
+    "graph_mean_ch_eff",
+    "ch_eff_ci",
+    "graph_mean_res_eff",
+    "res_eff_ci",
+    "average_tracker_dict",
+    "ci_tracker_dict"
+  ],
+  "result_points": 4,
+  "seed": 12345,
+  "plot_windows": 1,
+  "ui_responsive": true,
+  "elapsed_seconds": 0.6719999999986612
+}

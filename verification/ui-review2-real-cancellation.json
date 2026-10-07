@@ -1,0 +1,23 @@
+[
+  {
+    "phase": "growth",
+    "outcome": "finished_cancelled",
+    "latency_ms": 0.0,
+    "retained_previous": true,
+    "exit_code": 130
+  },
+  {
+    "phase": "development",
+    "outcome": "finished_cancelled",
+    "latency_ms": 0.0,
+    "retained_previous": true,
+    "exit_code": 130
+  },
+  {
+    "phase": "sex",
+    "outcome": "finished_cancelled",
+    "latency_ms": 0.0,
+    "retained_previous": true,
+    "exit_code": 130
+  }
+]

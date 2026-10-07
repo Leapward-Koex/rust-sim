@@ -1,0 +1,807 @@
+[
+  {
+    "requirement": "SCOPE-001",
+    "specification": "00-scope-and-source-authority.md",
+    "verification_kind": "Reference integrity",
+    "evidence": "Original checker: snapshots_match; fixtures source/checker SHA-256",
+    "boundary": "The active inline Cell is the authority; snapshots stay unchanged."
+  },
+  {
+    "requirement": "SCOPE-002",
+    "specification": "00-scope-and-source-authority.md",
+    "verification_kind": "Reference integrity",
+    "evidence": "Original checker: snapshots_match; fixtures source/checker SHA-256",
+    "boundary": "The active inline Cell is the authority; snapshots stay unchanged."
+  },
+  {
+    "requirement": "SCOPE-003",
+    "specification": "00-scope-and-source-authority.md",
+    "verification_kind": "Differential",
+    "evidence": "All phase and full_* fixtures",
+    "boundary": "Exact scripted choices; no scientific corrections."
+  },
+  {
+    "requirement": "SCOPE-004",
+    "specification": "00-scope-and-source-authority.md",
+    "verification_kind": "Differential + boundary",
+    "evidence": "Named *_error fixtures; full_lazy_* successes versus full_active_* failures; init_boolean_numeric_switches",
+    "boundary": "Arbitrary injected Python objects, mutation-after-exception observations, and unlimited integer sizes are outside the config-driven API."
+  },
+  {
+    "requirement": "SCOPE-005",
+    "specification": "00-scope-and-source-authority.md",
+    "verification_kind": "Excluded by plan",
+    "evidence": "Original specification/source review",
+    "boundary": "Legacy engine and separately imported cell.py are captured but not ported."
+  },
+  {
+    "requirement": "SCOPE-006",
+    "specification": "00-scope-and-source-authority.md",
+    "verification_kind": "Differential",
+    "evidence": "All phase and full_* fixtures",
+    "boundary": "Exact scripted choices; no scientific corrections."
+  },
+  {
+    "requirement": "SCOPE-007",
+    "specification": "00-scope-and-source-authority.md",
+    "verification_kind": "Source review",
+    "evidence": "Population model and fixture cell schema",
+    "boundary": "No spatial model, geometry, diffusion, lineage, or new biological processes."
+  },
+  {
+    "requirement": "SCOPE-008",
+    "specification": "00-scope-and-source-authority.md",
+    "verification_kind": "Adapted by plan",
+    "evidence": "Differential script counts and semantic candidate identities; seeded worker-invariance tests",
+    "boundary": "ChaCha streams intentionally differ from Python/NumPy seeded trajectories."
+  },
+  {
+    "requirement": "SCOPE-009",
+    "specification": "00-scope-and-source-authority.md",
+    "verification_kind": "Adapted by plan",
+    "evidence": "Implementation plan and runtime/interface checks",
+    "boundary": "Seeds, isolated repeat execution, parallelism, typed errors, process/UI improvements are explicit additions."
+  },
+  {
+    "requirement": "CONFIG-001",
+    "specification": "01-configuration-and-entrypoints.md",
+    "verification_kind": "Differential + interface",
+    "evidence": "All fixtures preserve full parameters; full_json_* private-marker/overflow extras; full_lazy_* phase-access cases; CLI/GUI config tests",
+    "boundary": "CLI dictionary replacement retained; GUI defaults normalize schedule to [0]."
+  },
+  {
+    "requirement": "CONFIG-002",
+    "specification": "01-configuration-and-entrypoints.md",
+    "verification_kind": "Differential + boundary",
+    "evidence": "Named *_error fixtures; full_lazy_* successes versus full_active_* failures; init_boolean_numeric_switches",
+    "boundary": "Arbitrary injected Python objects, mutation-after-exception observations, and unlimited integer sizes are outside the config-driven API."
+  },
+  {
+    "requirement": "RUN-001",
+    "specification": "01-configuration-and-entrypoints.md",
+    "verification_kind": "Differential + interface",
+    "evidence": "All fixtures preserve full parameters; full_json_* private-marker/overflow extras; full_lazy_* phase-access cases; CLI/GUI config tests",
+    "boundary": "CLI dictionary replacement retained; GUI defaults normalize schedule to [0]."
+  },
+  {
+    "requirement": "RUN-002",
+    "specification": "01-configuration-and-entrypoints.md",
+    "verification_kind": "Differential",
+    "evidence": "full_balanced_interval_sex; full_balanced_explicit_sex; full_empty_schedule_*; original interval_orchestration/list_orchestration",
+    "boundary": ""
+  },
+  {
+    "requirement": "RUN-003",
+    "specification": "01-configuration-and-entrypoints.md",
+    "verification_kind": "Adapted + differential",
+    "evidence": "full_* repeat results; original stale_measurements_at_main_entry/failed_run_contaminates_next_run",
+    "boundary": "Fresh processes remove stale globals; independent repeat RNG streams replace persistent module RNG state."
+  },
+  {
+    "requirement": "RUN-004",
+    "specification": "01-configuration-and-entrypoints.md",
+    "verification_kind": "Excluded by plan",
+    "evidence": "Original .vscode/launch.json source review",
+    "boundary": "Old launcher starts legacy Python; new documented launcher starts the Rust-backed UI."
+  },
+  {
+    "requirement": "UI-001",
+    "specification": "01-configuration-and-entrypoints.md",
+    "verification_kind": "Adapted by plan",
+    "evidence": "GUI/process tests and manual packaged smoke test",
+    "boundary": "Responsive progress, import/save, cancellation, error dialogs and tooltips replace broken legacy handling."
+  },
+  {
+    "requirement": "UI-002",
+    "specification": "01-configuration-and-entrypoints.md",
+    "verification_kind": "Adapted by plan",
+    "evidence": "GUI/process tests and manual packaged smoke test",
+    "boundary": "Responsive progress, import/save, cancellation, error dialogs and tooltips replace broken legacy handling."
+  },
+  {
+    "requirement": "CONFIG-003",
+    "specification": "01-configuration-and-entrypoints.md",
+    "verification_kind": "Differential + boundary",
+    "evidence": "Named *_error fixtures; full_lazy_* successes versus full_active_* failures; init_boolean_numeric_switches",
+    "boundary": "Arbitrary injected Python objects, mutation-after-exception observations, and unlimited integer sizes are outside the config-driven API."
+  },
+  {
+    "requirement": "STATE-001",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Reference integrity",
+    "evidence": "Original environment() compiles captured inline Cell AST",
+    "boundary": ""
+  },
+  {
+    "requirement": "STATE-002",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential + boundary",
+    "evidence": "Ordered normalized population comparison in all phase fixtures; original clone_identity",
+    "boundary": "Production-reachable binary loci retained; external object aliases/cross-run Cell IDs are not public interfaces."
+  },
+  {
+    "requirement": "STATE-003",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential + boundary",
+    "evidence": "Ordered normalized population comparison in all phase fixtures; original clone_identity",
+    "boundary": "Production-reachable binary loci retained; external object aliases/cross-run Cell IDs are not public interfaces."
+  },
+  {
+    "requirement": "STATE-004",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "growth_order_and_stale_fitness; sex_recombination_*; full_*; original clone_identity",
+    "boundary": "Returned genotype rows are independent; identity affects branch outcomes, not displayed IDs."
+  },
+  {
+    "requirement": "STATE-005",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_four_genotype_measurement; dev_fractional_effectiveness; init_fractional_epistasis; full_*",
+    "boundary": "Only binary alleles reachable from JSON-configured simulation are part of Rust cell storage."
+  },
+  {
+    "requirement": "STATE-006",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_four_genotype_measurement; dev_fractional_effectiveness; init_fractional_epistasis; full_*",
+    "boundary": "Only binary alleles reachable from JSON-configured simulation are part of Rust cell storage."
+  },
+  {
+    "requirement": "STATE-007",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "64 exploit_* binary one-locus cases; four exploit_fractional_* cases; original exploitability_truth_table",
+    "boundary": "Arbitrary nonbinary manually injected locus values are excluded."
+  },
+  {
+    "requirement": "STATE-008",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "64 exploit_* binary one-locus cases; four exploit_fractional_* cases; original exploitability_truth_table",
+    "boundary": "Arbitrary nonbinary manually injected locus values are excluded."
+  },
+  {
+    "requirement": "STATE-009",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_four_genotype_measurement; dev_fractional_effectiveness; init_fractional_epistasis; full_*",
+    "boundary": "Only binary alleles reachable from JSON-configured simulation are part of Rust cell storage."
+  },
+  {
+    "requirement": "STATE-010",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_four_genotype_measurement; dev_fractional_effectiveness; init_fractional_epistasis; full_*",
+    "boundary": "Only binary alleles reachable from JSON-configured simulation are part of Rust cell storage."
+  },
+  {
+    "requirement": "INIT-001",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "init_* populations, initial measurements and weighted-call counts",
+    "boundary": ""
+  },
+  {
+    "requirement": "INIT-002",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "init_* populations, initial measurements and weighted-call counts",
+    "boundary": ""
+  },
+  {
+    "requirement": "INIT-003",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "init_ties_even_and_whole_genome; init_fractional_epistasis",
+    "boundary": ""
+  },
+  {
+    "requirement": "INIT-004",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "init_sequential_overlap; original init_exclusive_overlap",
+    "boundary": ""
+  },
+  {
+    "requirement": "INIT-005",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "init_ties_even_and_whole_genome; init_fractional_epistasis",
+    "boundary": ""
+  },
+  {
+    "requirement": "INIT-006",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "init_* measurement values/locus counts; full_* time zero",
+    "boundary": ""
+  },
+  {
+    "requirement": "INIT-007",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "init_* measurement values/locus counts; full_* time zero",
+    "boundary": ""
+  },
+  {
+    "requirement": "INIT-008",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "init_* measurement values/locus counts; full_* time zero",
+    "boundary": ""
+  },
+  {
+    "requirement": "INIT-009",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "init_sequential_overlap; original init_exclusive_overlap",
+    "boundary": ""
+  },
+  {
+    "requirement": "INIT-010",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential + boundary",
+    "evidence": "init_zero_population_error; init_zero_loci_error; init_negative_loci; init_oversample_error",
+    "boundary": "Errors are structured; partial internal mutation before failure is not public state."
+  },
+  {
+    "requirement": "VEG-001",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "growth_germination_equal/above; growth_zero_penalty_still_draws",
+    "boundary": "Caller-owned Python-list identity is excluded; output ordering and draws are retained."
+  },
+  {
+    "requirement": "VEG-002",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "growth_germination_equal/above; growth_zero_penalty_still_draws",
+    "boundary": "Caller-owned Python-list identity is excluded; output ordering and draws are retained."
+  },
+  {
+    "requirement": "VEG-003",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "growth_germination_equal/above; growth_zero_penalty_still_draws",
+    "boundary": "Caller-owned Python-list identity is excluded; output ordering and draws are retained."
+  },
+  {
+    "requirement": "VEG-004",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential + sampler tests",
+    "evidence": "growth_raw_fitness; growth_negative_weights; real Rust cumulative-weight sampler unit tests",
+    "boundary": "Fixture weighted calls prescribe indices; they do not by themselves validate the real sampler."
+  },
+  {
+    "requirement": "VEG-005",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential + sampler tests",
+    "evidence": "growth_raw_fitness; growth_negative_weights; real Rust cumulative-weight sampler unit tests",
+    "boundary": "Fixture weighted calls prescribe indices; they do not by themselves validate the real sampler."
+  },
+  {
+    "requirement": "VEG-006",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "growth_inclusive_zero_mutation; growth_order_and_stale_fitness; full_* and consumed counts",
+    "boundary": ""
+  },
+  {
+    "requirement": "VEG-007",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "growth_inclusive_zero_mutation; growth_order_and_stale_fitness; full_* and consumed counts",
+    "boundary": ""
+  },
+  {
+    "requirement": "VEG-008",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "growth_inclusive_zero_mutation; growth_order_and_stale_fitness; full_* and consumed counts",
+    "boundary": ""
+  },
+  {
+    "requirement": "VEG-009",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "growth_inclusive_zero_mutation; growth_order_and_stale_fitness; full_* and consumed counts",
+    "boundary": ""
+  },
+  {
+    "requirement": "VEG-010",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential + source review",
+    "evidence": "growth_negative_weights; spontaneous full_* source failures; real Rust weight-error tests",
+    "boundary": "No clamping or reinitialization; failure text/partial object mutation not byte-compatible."
+  },
+  {
+    "requirement": "VEG-011",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "growth_inclusive_zero_mutation; growth_order_and_stale_fitness; full_* and consumed counts",
+    "boundary": ""
+  },
+  {
+    "requirement": "STATE-011",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Adapted by plan",
+    "evidence": "Differential script counts and semantic candidate identities; seeded worker-invariance tests",
+    "boundary": "ChaCha streams intentionally differ from Python/NumPy seeded trajectories."
+  },
+  {
+    "requirement": "STATE-012",
+    "specification": "02-state-initialization-growth.md",
+    "verification_kind": "Differential",
+    "evidence": "Named rounding/boundary/fitness/identity/XOR fixtures; all script-consumption comparisons",
+    "boundary": ""
+  },
+  {
+    "requirement": "DEV-001",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_order_leftovers; full_*; original slug_leftovers_and_aliasing",
+    "boundary": ""
+  },
+  {
+    "requirement": "DEV-002",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_order_leftovers; full_*; original slug_leftovers_and_aliasing",
+    "boundary": ""
+  },
+  {
+    "requirement": "DEV-003",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_nondiscrete_keeps_all; dev_unsupported_error",
+    "boundary": ""
+  },
+  {
+    "requirement": "DEV-004",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_prestalk_strict_boundary; all dev/exploit consumed counts",
+    "boundary": ""
+  },
+  {
+    "requirement": "DEV-005",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential + adaptation",
+    "evidence": "dev_duplicate_stalk_xor; full_*; RNG trace candidate_cells",
+    "boundary": "Sort candidates ascending; replay chooses the same target identity in source set order."
+  },
+  {
+    "requirement": "DEV-006",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential + adaptation",
+    "evidence": "dev_duplicate_stalk_xor; full_*; RNG trace candidate_cells",
+    "boundary": "Sort candidates ascending; replay chooses the same target identity in source set order."
+  },
+  {
+    "requirement": "DEV-007",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "exploit_* binary/fractional fixtures",
+    "boundary": ""
+  },
+  {
+    "requirement": "DEV-008",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_four_genotype_measurement; dev_fractional_effectiveness; dev_duplicate_stalk_xor",
+    "boundary": ""
+  },
+  {
+    "requirement": "DEV-009",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_empty_candidate_error; dev_all_stalk_error; dev_unsupported_error; full_* natural failures",
+    "boundary": ""
+  },
+  {
+    "requirement": "DEV-010",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_four_genotype_measurement; dev_fractional_effectiveness; dev_duplicate_stalk_xor",
+    "boundary": ""
+  },
+  {
+    "requirement": "SEX-001",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "sex_founders_excluded_and_partners_removed; full_balanced_*_sex",
+    "boundary": ""
+  },
+  {
+    "requirement": "SEX-002",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "sex_founders_excluded_and_partners_removed; full_balanced_*_sex",
+    "boundary": ""
+  },
+  {
+    "requirement": "SEX-003",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential + boundary",
+    "evidence": "sex_equal_values_distinct_identity; original sex_shared_loci_identity_branch",
+    "boundary": "Shared manually injected locus objects are excluded; equal-valued independent parents still consume recombination draws."
+  },
+  {
+    "requirement": "SEX-004",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "sex_recombination_0/1; sex_gate_equality_recombines; full_balanced_*_sex",
+    "boundary": ""
+  },
+  {
+    "requirement": "SEX-005",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "sex_recombination_0/1; sex_gate_equality_recombines; full_balanced_*_sex",
+    "boundary": ""
+  },
+  {
+    "requirement": "SEX-006",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "sex_recombination_0/1; sex_gate_equality_recombines; full_balanced_*_sex",
+    "boundary": ""
+  },
+  {
+    "requirement": "SEX-007",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "sex_founders_excluded_and_partners_removed; sex_recombination_*; original sex_alleles_independent_and_clones",
+    "boundary": ""
+  },
+  {
+    "requirement": "SEX-008",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "sex_founders_excluded_and_partners_removed; sex_recombination_*; original sex_alleles_independent_and_clones",
+    "boundary": ""
+  },
+  {
+    "requirement": "SEX-009",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "sex_missing_partner_error; sex_zero_macrocysts; sex_zero_germinations",
+    "boundary": ""
+  },
+  {
+    "requirement": "SEX-010",
+    "specification": "03-development-and-sex.md",
+    "verification_kind": "Differential",
+    "evidence": "sex_recombination_0/1; sex_gate_equality_recombines; full_balanced_*_sex",
+    "boundary": ""
+  },
+  {
+    "requirement": "MEASURE-001",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_four_genotype_measurement; dev_fractional_effectiveness; all init/full measurements",
+    "boundary": ""
+  },
+  {
+    "requirement": "MEASURE-002",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_four_genotype_measurement; dev_fractional_effectiveness; all init/full measurements",
+    "boundary": ""
+  },
+  {
+    "requirement": "MEASURE-003",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_four_genotype_measurement; dev_fractional_effectiveness; all init/full measurements",
+    "boundary": ""
+  },
+  {
+    "requirement": "MEASURE-004",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_four_genotype_measurement; dev_fractional_effectiveness; all init/full measurements",
+    "boundary": ""
+  },
+  {
+    "requirement": "MEASURE-005",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_four_genotype_measurement; dev_fractional_effectiveness; all init/full measurements",
+    "boundary": ""
+  },
+  {
+    "requirement": "MEASURE-006",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Adapted boundary",
+    "evidence": "Original empty_init_errors; dev_all_stalk_error",
+    "boundary": "Snapshot values preserved; internal partial histories after failure are not exposed by isolated Rust runs."
+  },
+  {
+    "requirement": "MEASURE-007",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential",
+    "evidence": "dev_four_genotype_measurement; dev_fractional_effectiveness; all init/full measurements",
+    "boundary": ""
+  },
+  {
+    "requirement": "AGG-001",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential",
+    "evidence": "All successful full_* results against actual Python main and real SciPy",
+    "boundary": "Floating accumulation compared within declared tolerances; discrete states exact."
+  },
+  {
+    "requirement": "AGG-002",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Adapted + differential",
+    "evidence": "full_* repeat results; original stale_measurements_at_main_entry/failed_run_contaminates_next_run",
+    "boundary": "Fresh processes remove stale globals; independent repeat RNG streams replace persistent module RNG state."
+  },
+  {
+    "requirement": "AGG-003",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential",
+    "evidence": "All successful full_* results against actual Python main and real SciPy",
+    "boundary": "Floating accumulation compared within declared tolerances; discrete states exact."
+  },
+  {
+    "requirement": "AGG-004",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential",
+    "evidence": "confidence_real_scipy; full_one_repeat_nan; full_no_sex_* with confidence_interval=.1; full_zero_repeats_error",
+    "boundary": ""
+  },
+  {
+    "requirement": "AGG-005",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential",
+    "evidence": "confidence_real_scipy; full_one_repeat_nan; full_no_sex_* with confidence_interval=.1; full_zero_repeats_error",
+    "boundary": ""
+  },
+  {
+    "requirement": "AGG-006",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential",
+    "evidence": "confidence_real_scipy; full_one_repeat_nan; full_no_sex_* with confidence_interval=.1; full_zero_repeats_error",
+    "boundary": ""
+  },
+  {
+    "requirement": "AGG-007",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential",
+    "evidence": "All successful full_* results against actual Python main and real SciPy",
+    "boundary": "Floating accumulation compared within declared tolerances; discrete states exact."
+  },
+  {
+    "requirement": "OUTPUT-001",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Interface verification",
+    "evidence": "Original interval_orchestration suffix capture; CLI export/suppression tests",
+    "boundary": "Exact --result transport path and atomic/recoverable GUI exports are deliberate additions."
+  },
+  {
+    "requirement": "OUTPUT-002",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential + interface",
+    "evidence": "All successful full_* 21-key results; full_balanced_interval/explicit_sex; full_one_repeat_nan; full_json_* objects/escaped-marker/1e309",
+    "boundary": "Run metadata lives outside legacy result; JSON whitespace need not match byte-for-byte."
+  },
+  {
+    "requirement": "OUTPUT-003",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential + interface",
+    "evidence": "All successful full_* 21-key results; full_balanced_interval/explicit_sex; full_one_repeat_nan; full_json_* objects/escaped-marker/1e309",
+    "boundary": "Run metadata lives outside legacy result; JSON whitespace need not match byte-for-byte."
+  },
+  {
+    "requirement": "OUTPUT-004",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential + interface",
+    "evidence": "All successful full_* 21-key results; full_balanced_interval/explicit_sex; full_one_repeat_nan; full_json_* objects/escaped-marker/1e309",
+    "boundary": "Run metadata lives outside legacy result; JSON whitespace need not match byte-for-byte."
+  },
+  {
+    "requirement": "OUTPUT-005",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Differential + interface",
+    "evidence": "All successful full_* 21-key results; full_balanced_interval/explicit_sex; full_one_repeat_nan; full_json_* objects/escaped-marker/1e309",
+    "boundary": "Run metadata lives outside legacy result; JSON whitespace need not match byte-for-byte."
+  },
+  {
+    "requirement": "DISPLAY-001",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Adapted by plan",
+    "evidence": "GUI/process tests and manual packaged smoke test",
+    "boundary": "Responsive progress, import/save, cancellation, error dialogs and tooltips replace broken legacy handling."
+  },
+  {
+    "requirement": "DISPLAY-002",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "Adapted by plan",
+    "evidence": "GUI/process tests and manual packaged smoke test",
+    "boundary": "Responsive progress, import/save, cancellation, error dialogs and tooltips replace broken legacy handling."
+  },
+  {
+    "requirement": "DISPLAY-003",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "UI verification",
+    "evidence": "Matplotlib artist assertions and packaged graph smoke test",
+    "boundary": "Retain styling/duplicate marker data; empty schedule renders without markers."
+  },
+  {
+    "requirement": "DISPLAY-004",
+    "specification": "04-measurements-and-output.md",
+    "verification_kind": "UI verification",
+    "evidence": "Matplotlib artist assertions and packaged graph smoke test",
+    "boundary": "Retain styling/duplicate marker data; empty schedule renders without markers."
+  },
+  {
+    "requirement": "LEGACY-001",
+    "specification": "05-legacy-and-supporting-tools.md",
+    "verification_kind": "Excluded by plan",
+    "evidence": "Original specification/source review",
+    "boundary": "Legacy engine and separately imported cell.py are captured but not ported."
+  },
+  {
+    "requirement": "LEGACY-002",
+    "specification": "05-legacy-and-supporting-tools.md",
+    "verification_kind": "Excluded by plan",
+    "evidence": "Original specification/source review",
+    "boundary": "Legacy engine and separately imported cell.py are captured but not ported."
+  },
+  {
+    "requirement": "TOOL-001",
+    "specification": "05-legacy-and-supporting-tools.md",
+    "verification_kind": "Excluded by plan",
+    "evidence": "Original supporting-tool specifications/source review",
+    "boundary": "Standalone legacy plot/batch/demo scripts are not rebuilt; legacy result schema is retained for their consumers."
+  },
+  {
+    "requirement": "TOOL-002",
+    "specification": "05-legacy-and-supporting-tools.md",
+    "verification_kind": "Excluded by plan",
+    "evidence": "Original supporting-tool specifications/source review",
+    "boundary": "Standalone legacy plot/batch/demo scripts are not rebuilt; legacy result schema is retained for their consumers."
+  },
+  {
+    "requirement": "TOOL-003",
+    "specification": "05-legacy-and-supporting-tools.md",
+    "verification_kind": "Excluded by plan",
+    "evidence": "Original supporting-tool specifications/source review",
+    "boundary": "Standalone legacy plot/batch/demo scripts are not rebuilt; legacy result schema is retained for their consumers."
+  },
+  {
+    "requirement": "TOOL-004",
+    "specification": "05-legacy-and-supporting-tools.md",
+    "verification_kind": "Excluded by plan",
+    "evidence": "Original supporting-tool specifications/source review",
+    "boundary": "Standalone legacy plot/batch/demo scripts are not rebuilt; legacy result schema is retained for their consumers."
+  },
+  {
+    "requirement": "TOOL-005",
+    "specification": "05-legacy-and-supporting-tools.md",
+    "verification_kind": "Excluded by plan",
+    "evidence": "Original supporting-tool specifications/source review",
+    "boundary": "Standalone legacy plot/batch/demo scripts are not rebuilt; legacy result schema is retained for their consumers."
+  },
+  {
+    "requirement": "TOOL-006",
+    "specification": "05-legacy-and-supporting-tools.md",
+    "verification_kind": "Excluded by plan",
+    "evidence": "Original supporting-tool specifications/source review",
+    "boundary": "Standalone legacy plot/batch/demo scripts are not rebuilt; legacy result schema is retained for their consumers."
+  },
+  {
+    "requirement": "TOOL-007",
+    "specification": "05-legacy-and-supporting-tools.md",
+    "verification_kind": "Excluded by plan",
+    "evidence": "Original supporting-tool specifications/source review",
+    "boundary": "Standalone legacy plot/batch/demo scripts are not rebuilt; legacy result schema is retained for their consumers."
+  },
+  {
+    "requirement": "TOOL-008",
+    "specification": "05-legacy-and-supporting-tools.md",
+    "verification_kind": "Environment evidence",
+    "evidence": "reference-requirements.lock; fixtures Python/NumPy/SciPy versions; benchmark report",
+    "boundary": "Historical unspecified Python/Tcl versions cannot be reconstructed."
+  },
+  {
+    "requirement": "COMPAT-001",
+    "specification": "06-compatibility-and-verification.md",
+    "verification_kind": "Differential",
+    "evidence": "Named rounding/boundary/fitness/identity/XOR fixtures; all script-consumption comparisons",
+    "boundary": ""
+  },
+  {
+    "requirement": "COMPAT-002",
+    "specification": "06-compatibility-and-verification.md",
+    "verification_kind": "Adapted by plan",
+    "evidence": "Differential script counts and semantic candidate identities; seeded worker-invariance tests",
+    "boundary": "ChaCha streams intentionally differ from Python/NumPy seeded trajectories."
+  },
+  {
+    "requirement": "COMPAT-003",
+    "specification": "06-compatibility-and-verification.md",
+    "verification_kind": "Differential + adaptation",
+    "evidence": "Separated Python-family channels and NumPy integers; production RNG stream unit tests",
+    "boundary": "New master seed and per-repeat stream derivation are deliberate differences."
+  },
+  {
+    "requirement": "COMPAT-004",
+    "specification": "06-compatibility-and-verification.md",
+    "verification_kind": "Differential",
+    "evidence": "Named rounding/boundary/fitness/identity/XOR fixtures; all script-consumption comparisons",
+    "boundary": ""
+  },
+  {
+    "requirement": "COMPAT-005",
+    "specification": "06-compatibility-and-verification.md",
+    "verification_kind": "Differential + boundary",
+    "evidence": "init_ties_even_and_whole_genome; boolean switches; identity/XOR fixtures",
+    "boundary": "Fixed storage limits fail explicitly; arbitrary direct Python aliases/nonbinary loci excluded."
+  },
+  {
+    "requirement": "COMPAT-006",
+    "specification": "06-compatibility-and-verification.md",
+    "verification_kind": "Environment evidence",
+    "evidence": "reference-requirements.lock; fixtures Python/NumPy/SciPy versions; benchmark report",
+    "boundary": "Historical unspecified Python/Tcl versions cannot be reconstructed."
+  },
+  {
+    "requirement": "VERIFY-001",
+    "specification": "06-compatibility-and-verification.md",
+    "verification_kind": "Verification evolution",
+    "evidence": "Unchanged check_source_behavior.py retained; 31 results; new differential.py and real SciPy fixtures",
+    "boundary": "Original verification limitations describe the earlier report. New checks supplement rather than rewrite that record."
+  },
+  {
+    "requirement": "VERIFY-002",
+    "specification": "06-compatibility-and-verification.md",
+    "verification_kind": "Verification evolution",
+    "evidence": "Unchanged check_source_behavior.py retained; 31 results; new differential.py and real SciPy fixtures",
+    "boundary": "Original verification limitations describe the earlier report. New checks supplement rather than rewrite that record."
+  },
+  {
+    "requirement": "VERIFY-003",
+    "specification": "06-compatibility-and-verification.md",
+    "verification_kind": "Verification evolution",
+    "evidence": "Unchanged check_source_behavior.py retained; 31 results; new differential.py and real SciPy fixtures",
+    "boundary": "Original verification limitations describe the earlier report. New checks supplement rather than rewrite that record."
+  },
+  {
+    "requirement": "VERIFY-004",
+    "specification": "06-compatibility-and-verification.md",
+    "verification_kind": "Verification evolution",
+    "evidence": "Unchanged check_source_behavior.py retained; 31 results; new differential.py and real SciPy fixtures",
+    "boundary": "Original verification limitations describe the earlier report. New checks supplement rather than rewrite that record."
+  },
+  {
+    "requirement": "VERIFY-005",
+    "specification": "06-compatibility-and-verification.md",
+    "verification_kind": "Verification evolution",
+    "evidence": "Unchanged check_source_behavior.py retained; 31 results; new differential.py and real SciPy fixtures",
+    "boundary": "Original verification limitations describe the earlier report. New checks supplement rather than rewrite that record."
+  }
+]

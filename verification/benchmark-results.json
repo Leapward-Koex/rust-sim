@@ -1,0 +1,236 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "logical_cpus": 24,
+  "method": "Fresh process wall time; progress to log; peak process-tree working set sampled every 10ms. Includes process startup, imports, and aggregation. Python and Rust use different random generators.",
+  "cycles": 50,
+  "repeats": 1,
+  "samples": 3,
+  "workers": 1,
+  "cases": {
+    "ordinary": {
+      "parameters": {
+        "n_runs": 1,
+        "n_dev": 50,
+        "i_macrocyst": [
+          0
+        ],
+        "sex_cycle_interval": 0,
+        "vg": 10,
+        "n": 10000,
+        "sl": 1000,
+        "sp": 0.8,
+        "m_ch": 0.001,
+        "m_re": 0.001,
+        "c_ch": 0.01,
+        "c_res": 0.01,
+        "ch_germ": 0.0,
+        "c_ch_res": 0.0,
+        "ch_start": 0.0,
+        "res_start": 0.0,
+        "ch_res_dist": 1,
+        "ch_eff_rc": 0.0,
+        "res_eff_rc": 0.0,
+        "mc_count": 100,
+        "mc_germ_count": 100,
+        "recomb_chance": 1.0,
+        "mt1_start": 0.5,
+        "mt2_start": 0.5,
+        "mt3_start": 0.0,
+        "output_filepath": "",
+        "resistance_type": 1.0,
+        "gene_pairs": 3,
+        "discrete_res": 1.0,
+        "ch_self_cheat": 0,
+        "confidence_interval": 0.95
+      },
+      "rust": [
+        {
+          "seconds": 0.5326184000005014,
+          "peak_working_set_bytes": 15118336,
+          "log": "build\\benchmarks\\1791366068286400500\\ordinary-rust-0.log"
+        },
+        {
+          "seconds": 0.5086057000007713,
+          "peak_working_set_bytes": 15286272,
+          "log": "build\\benchmarks\\1791366068286400500\\ordinary-rust-1.log"
+        },
+        {
+          "seconds": 0.5088986999980989,
+          "peak_working_set_bytes": 15273984,
+          "log": "build\\benchmarks\\1791366068286400500\\ordinary-rust-2.log"
+        }
+      ],
+      "python": [
+        {
+          "seconds": 23.676165000004403,
+          "peak_working_set_bytes": 140193792,
+          "log": "build\\benchmarks\\1791366068286400500\\ordinary-python-0.log"
+        },
+        {
+          "seconds": 23.235890399999334,
+          "peak_working_set_bytes": 138702848,
+          "log": "build\\benchmarks\\1791366068286400500\\ordinary-python-1.log"
+        },
+        {
+          "seconds": 22.770040899995365,
+          "peak_working_set_bytes": 139567104,
+          "log": "build\\benchmarks\\1791366068286400500\\ordinary-python-2.log"
+        }
+      ],
+      "python_median_seconds": 23.235890399999334,
+      "rust_median_seconds": 0.5088986999980989,
+      "speedup": 45.65916635292277
+    },
+    "sex-heavy": {
+      "parameters": {
+        "n_runs": 1,
+        "n_dev": 50,
+        "i_macrocyst": [
+          0
+        ],
+        "sex_cycle_interval": 2,
+        "vg": 10,
+        "n": 10000,
+        "sl": 1000,
+        "sp": 0.8,
+        "m_ch": 0.001,
+        "m_re": 0.001,
+        "c_ch": 0.01,
+        "c_res": 0.01,
+        "ch_germ": 0.0,
+        "c_ch_res": 0.0,
+        "ch_start": 0.3,
+        "res_start": 0.2,
+        "ch_res_dist": 1,
+        "ch_eff_rc": 0.0,
+        "res_eff_rc": 0.0,
+        "mc_count": 100,
+        "mc_germ_count": 100,
+        "recomb_chance": 1.0,
+        "mt1_start": 0.5,
+        "mt2_start": 0.5,
+        "mt3_start": 0.0,
+        "output_filepath": "",
+        "resistance_type": 1.0,
+        "gene_pairs": 3,
+        "discrete_res": 1.0,
+        "ch_self_cheat": 0,
+        "confidence_interval": 0.95
+      },
+      "rust": [
+        {
+          "seconds": 0.5958106000034604,
+          "peak_working_set_bytes": 15351808,
+          "log": "build\\benchmarks\\1791366068286400500\\sex-heavy-rust-0.log"
+        },
+        {
+          "seconds": 0.6243001999973785,
+          "peak_working_set_bytes": 15331328,
+          "log": "build\\benchmarks\\1791366068286400500\\sex-heavy-rust-1.log"
+        },
+        {
+          "seconds": 0.5722669000024325,
+          "peak_working_set_bytes": 15323136,
+          "log": "build\\benchmarks\\1791366068286400500\\sex-heavy-rust-2.log"
+        }
+      ],
+      "python": [
+        {
+          "seconds": 28.1222304000039,
+          "peak_working_set_bytes": 139333632,
+          "log": "build\\benchmarks\\1791366068286400500\\sex-heavy-python-0.log"
+        },
+        {
+          "seconds": 26.73814080000011,
+          "peak_working_set_bytes": 139575296,
+          "log": "build\\benchmarks\\1791366068286400500\\sex-heavy-python-1.log"
+        },
+        {
+          "seconds": 26.137907100004668,
+          "peak_working_set_bytes": 139046912,
+          "log": "build\\benchmarks\\1791366068286400500\\sex-heavy-python-2.log"
+        }
+      ],
+      "python_median_seconds": 26.73814080000011,
+      "rust_median_seconds": 0.5958106000034604,
+      "speedup": 44.87691356925308
+    },
+    "higher-locus": {
+      "parameters": {
+        "n_runs": 1,
+        "n_dev": 50,
+        "i_macrocyst": [
+          0
+        ],
+        "sex_cycle_interval": 0,
+        "vg": 10,
+        "n": 10000,
+        "sl": 1000,
+        "sp": 0.8,
+        "m_ch": 0.001,
+        "m_re": 0.001,
+        "c_ch": 0.01,
+        "c_res": 0.01,
+        "ch_germ": 0.0,
+        "c_ch_res": 0.0,
+        "ch_start": 0.3,
+        "res_start": 0.2,
+        "ch_res_dist": 1,
+        "ch_eff_rc": 0.0,
+        "res_eff_rc": 0.0,
+        "mc_count": 100,
+        "mc_germ_count": 100,
+        "recomb_chance": 1.0,
+        "mt1_start": 0.5,
+        "mt2_start": 0.5,
+        "mt3_start": 0.0,
+        "output_filepath": "",
+        "resistance_type": 1.0,
+        "gene_pairs": 12,
+        "discrete_res": 1.0,
+        "ch_self_cheat": 0,
+        "confidence_interval": 0.95
+      },
+      "rust": [
+        {
+          "seconds": 0.7880270999958157,
+          "peak_working_set_bytes": 15552512,
+          "log": "build\\benchmarks\\1791366068286400500\\higher-locus-rust-0.log"
+        },
+        {
+          "seconds": 0.7812573000046541,
+          "peak_working_set_bytes": 15564800,
+          "log": "build\\benchmarks\\1791366068286400500\\higher-locus-rust-1.log"
+        },
+        {
+          "seconds": 0.780113299995719,
+          "peak_working_set_bytes": 15515648,
+          "log": "build\\benchmarks\\1791366068286400500\\higher-locus-rust-2.log"
+        }
+      ],
+      "python": [
+        {
+          "seconds": 59.129586399998516,
+          "peak_working_set_bytes": 162807808,
+          "log": "build\\benchmarks\\1791366068286400500\\higher-locus-python-0.log"
+        },
+        {
+          "seconds": 59.53322880000633,
+          "peak_working_set_bytes": 161910784,
+          "log": "build\\benchmarks\\1791366068286400500\\higher-locus-python-1.log"
+        },
+        {
+          "seconds": 59.310342700002366,
+          "peak_working_set_bytes": 162541568,
+          "log": "build\\benchmarks\\1791366068286400500\\higher-locus-python-2.log"
+        }
+      ],
+      "python_median_seconds": 59.310342700002366,
+      "rust_median_seconds": 0.7812573000046541,
+      "speedup": 75.91652929150108
+    }
+  },
+  "engine_sha256": "e1cfb5390048b3ddba043b7dfb1b1824f579744b70f66fbef1428846b9c2d549",
+  "source_sha256": "7638ecf8f59ee28a56a6ea288025d75529437b99b188757b6b52f2855f9c7d3a"
+}
