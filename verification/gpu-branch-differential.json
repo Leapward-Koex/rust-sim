@@ -1,0 +1,649 @@
+{
+  "fixture_sha256": "eb91848e938723b6f13ac9002833bccf23b7ab93e6beb208ac0c806f109b307b",
+  "executable": "C:\\Dev\\Dicty sim\\rust-sim\\target\\release\\dicty-fixture.exe",
+  "executable_sha256": "b50a8c8184a8d60dfef6d1378e3bc10b4166e018a7b9e8c1d11743803242ca0a",
+  "checked_at_utc": "2026-10-07T10:59:18.288179+00:00",
+  "python": "3.12.14",
+  "numpy": "1.26.4",
+  "scipy": "1.13.0",
+  "passed": 148,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "init_sequential_overlap",
+      "status": "passed"
+    },
+    {
+      "name": "init_ties_even_and_whole_genome",
+      "status": "passed"
+    },
+    {
+      "name": "init_fractional_epistasis",
+      "status": "passed"
+    },
+    {
+      "name": "init_nonunit_mating_weights",
+      "status": "passed"
+    },
+    {
+      "name": "init_negative_individual_weight",
+      "status": "passed"
+    },
+    {
+      "name": "init_boolean_numeric_switches",
+      "status": "passed"
+    },
+    {
+      "name": "init_zero_population_error",
+      "reference_error": "ZeroDivisionError: division by zero",
+      "rust_error": "Measurement divides by zero: empty population or zero gene_pairs",
+      "status": "passed"
+    },
+    {
+      "name": "init_zero_loci_error",
+      "reference_error": "ZeroDivisionError: division by zero",
+      "rust_error": "Measurement divides by zero: empty population or zero gene_pairs",
+      "status": "passed"
+    },
+    {
+      "name": "init_negative_loci",
+      "status": "passed"
+    },
+    {
+      "name": "init_oversample_error",
+      "reference_error": "ValueError: Sample larger than population or is negative",
+      "rust_error": "Sample size 13 is outside population size 12",
+      "status": "passed"
+    },
+    {
+      "name": "growth_raw_fitness",
+      "status": "passed"
+    },
+    {
+      "name": "growth_inclusive_zero_mutation",
+      "status": "passed"
+    },
+    {
+      "name": "growth_order_and_stale_fitness",
+      "status": "passed"
+    },
+    {
+      "name": "growth_germination_equal",
+      "status": "passed"
+    },
+    {
+      "name": "growth_germination_above",
+      "status": "passed"
+    },
+    {
+      "name": "growth_zero_penalty_still_draws",
+      "status": "passed"
+    },
+    {
+      "name": "growth_negative_weights",
+      "status": "passed"
+    },
+    {
+      "name": "dev_four_genotype_measurement",
+      "status": "passed"
+    },
+    {
+      "name": "dev_fractional_effectiveness",
+      "status": "passed"
+    },
+    {
+      "name": "dev_order_leftovers",
+      "status": "passed"
+    },
+    {
+      "name": "dev_nondiscrete_keeps_all",
+      "status": "passed"
+    },
+    {
+      "name": "dev_duplicate_stalk_xor",
+      "status": "passed"
+    },
+    {
+      "name": "dev_prestalk_strict_boundary",
+      "status": "passed"
+    },
+    {
+      "name": "dev_unsupported_error",
+      "reference_error": "ZeroDivisionError: division by zero",
+      "rust_error": "Measurement divides by zero: empty population or zero gene_pairs",
+      "status": "passed"
+    },
+    {
+      "name": "dev_empty_candidate_error",
+      "reference_error": "ValueError: high <= 0",
+      "rust_error": "Cannot choose from an empty candidate set",
+      "status": "passed"
+    },
+    {
+      "name": "dev_all_stalk_error",
+      "reference_error": "ZeroDivisionError: division by zero",
+      "rust_error": "Measurement divides by zero: empty population or zero gene_pairs",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_0_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_0_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_0_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_0_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_1_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_1_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_1_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_1_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_2_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_2_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_2_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_2_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_3_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_3_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_3_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_00_3_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_0_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_0_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_0_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_0_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_1_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_1_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_1_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_1_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_2_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_2_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_2_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_2_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_3_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_3_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_3_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_01_3_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_0_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_0_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_0_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_0_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_1_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_1_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_1_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_1_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_2_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_2_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_2_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_2_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_3_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_3_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_3_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_10_3_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_0_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_0_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_0_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_0_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_1_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_1_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_1_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_1_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_2_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_2_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_2_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_2_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_3_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_3_1",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_3_2",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_11_3_3",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_fractional_0.5_0",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_fractional_0_0.5",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_fractional_1_0.5",
+      "status": "passed"
+    },
+    {
+      "name": "exploit_fractional_0.5_1",
+      "status": "passed"
+    },
+    {
+      "name": "sex_recombination_0",
+      "status": "passed"
+    },
+    {
+      "name": "sex_recombination_1",
+      "status": "passed"
+    },
+    {
+      "name": "sex_equal_values_distinct_identity",
+      "status": "passed"
+    },
+    {
+      "name": "sex_gate_equality_recombines",
+      "status": "passed"
+    },
+    {
+      "name": "sex_founders_excluded_and_partners_removed",
+      "status": "passed"
+    },
+    {
+      "name": "sex_missing_partner_error",
+      "reference_error": "ValueError: Sample larger than population or is negative",
+      "rust_error": "Sample size 1 is outside population size 0",
+      "status": "passed"
+    },
+    {
+      "name": "sex_zero_macrocysts",
+      "status": "passed"
+    },
+    {
+      "name": "sex_zero_germinations",
+      "status": "passed"
+    },
+    {
+      "name": "full_no_sex_seed_0",
+      "status": "passed"
+    },
+    {
+      "name": "full_no_sex_seed_1",
+      "reference_error": "ValueError: high <= 0",
+      "rust_error": "Cannot choose from an empty candidate set",
+      "status": "passed"
+    },
+    {
+      "name": "full_no_sex_seed_2",
+      "status": "passed"
+    },
+    {
+      "name": "full_no_sex_seed_3",
+      "status": "passed"
+    },
+    {
+      "name": "full_no_sex_seed_4",
+      "status": "passed"
+    },
+    {
+      "name": "full_no_sex_seed_5",
+      "status": "passed"
+    },
+    {
+      "name": "full_no_sex_seed_6",
+      "status": "passed"
+    },
+    {
+      "name": "full_no_sex_seed_7",
+      "reference_error": "ValueError: high <= 0",
+      "rust_error": "Cannot choose from an empty candidate set",
+      "status": "passed"
+    },
+    {
+      "name": "full_no_sex_seed_8",
+      "reference_error": "ValueError: high <= 0",
+      "rust_error": "Cannot choose from an empty candidate set",
+      "status": "passed"
+    },
+    {
+      "name": "full_no_sex_seed_9",
+      "status": "passed"
+    },
+    {
+      "name": "full_no_sex_seed_10",
+      "status": "passed"
+    },
+    {
+      "name": "full_no_sex_seed_11",
+      "status": "passed"
+    },
+    {
+      "name": "full_interval_sex_seed_0",
+      "reference_error": "ValueError: Sample larger than population or is negative",
+      "rust_error": "Sample size 1 is outside population size 0",
+      "status": "passed"
+    },
+    {
+      "name": "full_explicit_sex_seed_0",
+      "status": "passed"
+    },
+    {
+      "name": "full_interval_sex_seed_1",
+      "reference_error": "ValueError: Sample larger than population or is negative",
+      "rust_error": "Sample size 1 is outside population size 0",
+      "status": "passed"
+    },
+    {
+      "name": "full_explicit_sex_seed_1",
+      "status": "passed"
+    },
+    {
+      "name": "full_interval_sex_seed_2",
+      "status": "passed"
+    },
+    {
+      "name": "full_explicit_sex_seed_2",
+      "status": "passed"
+    },
+    {
+      "name": "full_interval_sex_seed_3",
+      "reference_error": "ValueError: Sample larger than population or is negative",
+      "rust_error": "Sample size 1 is outside population size 0",
+      "status": "passed"
+    },
+    {
+      "name": "full_explicit_sex_seed_3",
+      "status": "passed"
+    },
+    {
+      "name": "full_interval_sex_seed_4",
+      "reference_error": "ValueError: Sample larger than population or is negative",
+      "rust_error": "Sample size 1 is outside population size 0",
+      "status": "passed"
+    },
+    {
+      "name": "full_explicit_sex_seed_4",
+      "status": "passed"
+    },
+    {
+      "name": "full_interval_sex_seed_5",
+      "reference_error": "ValueError: Sample larger than population or is negative",
+      "rust_error": "Sample size 1 is outside population size 0",
+      "status": "passed"
+    },
+    {
+      "name": "full_explicit_sex_seed_5",
+      "status": "passed"
+    },
+    {
+      "name": "full_interval_sex_seed_6",
+      "reference_error": "ValueError: Sample larger than population or is negative",
+      "rust_error": "Sample size 1 is outside population size 0",
+      "status": "passed"
+    },
+    {
+      "name": "full_explicit_sex_seed_6",
+      "status": "passed"
+    },
+    {
+      "name": "full_interval_sex_seed_7",
+      "reference_error": "ValueError: Sample larger than population or is negative",
+      "rust_error": "Sample size 1 is outside population size 0",
+      "status": "passed"
+    },
+    {
+      "name": "full_explicit_sex_seed_7",
+      "status": "passed"
+    },
+    {
+      "name": "full_balanced_interval_sex",
+      "status": "passed"
+    },
+    {
+      "name": "full_balanced_explicit_sex",
+      "status": "passed"
+    },
+    {
+      "name": "full_one_repeat_nan",
+      "status": "passed"
+    },
+    {
+      "name": "full_empty_schedule_interval_zero",
+      "status": "passed"
+    },
+    {
+      "name": "full_empty_schedule_interval_error",
+      "reference_error": "IndexError: list index out of range",
+      "rust_error": "Nonzero sex_cycle_interval with empty i_macrocyst",
+      "status": "passed"
+    },
+    {
+      "name": "full_zero_repeats_error",
+      "reference_error": "IndexError: list index out of range",
+      "rust_error": "Cannot aggregate zero repeats",
+      "status": "passed"
+    },
+    {
+      "name": "full_negative_cycles",
+      "status": "passed"
+    },
+    {
+      "name": "full_lazy_zero_cycles_fractional_counts",
+      "status": "passed"
+    },
+    {
+      "name": "full_lazy_no_sex_fractional_germination",
+      "status": "passed"
+    },
+    {
+      "name": "full_lazy_nondiscrete_null_spores",
+      "status": "passed"
+    },
+    {
+      "name": "full_lazy_no_resistors_null_effectiveness",
+      "status": "passed"
+    },
+    {
+      "name": "full_lazy_no_carriers_null_effectiveness",
+      "status": "passed"
+    },
+    {
+      "name": "full_json_private_number_objects",
+      "status": "passed"
+    },
+    {
+      "name": "full_json_overflow_and_escaped_marker",
+      "status": "passed"
+    },
+    {
+      "name": "full_active_fractional_growth_error",
+      "reference_error": "TypeError: 'float' object cannot be interpreted as an integer",
+      "rust_error": "vg: Expected an integer (a JSON float is not accepted by Python range)",
+      "status": "passed"
+    },
+    {
+      "name": "full_active_fractional_macrocysts_error",
+      "reference_error": "TypeError: can't multiply sequence by non-int of type 'float'",
+      "rust_error": "mc_count: Expected an integer (a JSON float is not accepted by Python range)",
+      "status": "passed"
+    },
+    {
+      "name": "full_active_null_spores_error",
+      "reference_error": "TypeError: unsupported operand type(s) for -: 'int' and 'NoneType'",
+      "rust_error": "sp: Expected a number",
+      "status": "passed"
+    },
+    {
+      "name": "confidence_real_scipy",
+      "status": "passed"
+    }
+  ]
+}

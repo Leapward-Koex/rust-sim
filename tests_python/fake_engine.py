@@ -11,6 +11,7 @@ parser.add_argument("--result", required=True)
 parser.add_argument("--events", action="store_true")
 parser.add_argument("--seed", type=int, default=123)
 parser.add_argument("--threads")
+parser.add_argument("--backend", choices=("auto", "cpu", "gpu"), default="auto")
 args = parser.parse_args()
 parameters = json.loads(Path(args.param).read_text(encoding="utf-8"))
 behavior = parameters.get("_test_behavior", "success")
@@ -29,7 +30,14 @@ if behavior == "invalid_json":
 if behavior == "wrong_version":
     print('{"protocol_version":2,"type":"started","run_id":"fixture-run"}', flush=True)
     sys.exit(0)
-emit("started", seed=args.seed)
+backend = "gpu" if args.backend == "gpu" else "cpu"
+selection = dict(backend=backend, requested_backend=args.backend,
+                 device="Fixture FP64 GPU" if backend == "gpu" else None,
+                 backend_reason="No supported GPU is available." if args.backend == "auto" else "Explicit selection.")
+if behavior == "gpu_unavailable":
+    emit("error", message="GPU-assisted computation requires a supported double-precision GPU.")
+    sys.exit(1)
+emit("started", seed=args.seed, **selection)
 if behavior == "stderr_flood":
     for i in range(2000):
         print("diagnostic " + str(i), file=sys.stderr)
@@ -65,5 +73,5 @@ if behavior == "invalid_result":
 if behavior == "incomplete_parameters":
     result["parameters"] = {"i_macrocyst": [0]}
 result_path.write_text(json.dumps(result), encoding="utf-8")
-metadata_path.write_text(json.dumps({"seed": args.seed}), encoding="utf-8")
-emit("completed", result_path=str(result_path), metadata_path=str(metadata_path), seed=args.seed)
+metadata_path.write_text(json.dumps({"seed": args.seed, **selection}), encoding="utf-8")
+emit("completed", result_path=str(result_path), metadata_path=str(metadata_path), seed=args.seed, **selection)

@@ -1,6 +1,7 @@
 use clap::Parser;
 use dicty_sim::{
     BEHAVIOR_VERSION, CANCELLED, Result,
+    accelerated::{self, Backend},
     aggregate::aggregate,
     config::Config,
     engine::{self, Context},
@@ -27,6 +28,10 @@ struct Args {
     result: Option<PathBuf>,
     #[arg(long)]
     events: bool,
+    #[arg(long, default_value = "auto", value_parser = ["auto", "cpu", "gpu"])]
+    backend: String,
+    #[arg(long, default_value_t = 128)]
+    gpu_batch_size: usize,
 }
 struct Events {
     enabled: bool,
@@ -177,19 +182,57 @@ fn execute(args: &Args, events: &Events, ctx: &Context) -> Result<()> {
     let logical = std::thread::available_parallelism()
         .map(usize::from)
         .unwrap_or(1);
-    let threads = args
-        .threads
-        .unwrap_or_else(|| cfg.n_runs.max(1) as usize)
-        .min(args.threads.unwrap_or(logical.saturating_sub(1).max(1)));
-    if threads == 0 {
+    if args.threads == Some(0) {
         return Err("--threads must be at least one".into());
     }
+    if args.gpu_batch_size == 0 {
+        return Err("--gpu-batch-size must be at least one".into());
+    }
     let start = Instant::now();
-    events.emit("started",json!({"seed":seed,"threads":threads,"total_repeats":cfg.n_runs,"total_cycles":cfg.n_dev.max(0),"engine_version":env!("CARGO_PKG_VERSION")}));
-    eprintln!("Seed: {seed}; repeat workers: {threads}");
-    let repeats = engine::simulate(&cfg, seed, threads, ctx, |p| {
-        events.emit("progress", serde_json::to_value(p).unwrap())
-    })?;
+    let mut backend = Backend::select(&args.backend, &cfg, args.gpu_batch_size)?;
+    ctx.check()?;
+    let default_workers = logical
+        .saturating_sub(1)
+        .max(1)
+        .min(if backend.gpu.is_some() { 8 } else { usize::MAX });
+    let threads = args
+        .threads
+        .unwrap_or(default_workers.min(cfg.n_runs.max(1) as usize));
+    let backend_name = backend.name();
+    let gpu_batch_size = backend.batch_size;
+    let device = backend.device().map(str::to_owned);
+    events.emit("started",json!({"seed":seed,"threads":threads,"total_repeats":cfg.n_runs,"total_cycles":cfg.n_dev.max(0),"engine_version":env!("CARGO_PKG_VERSION"),"backend":backend_name,"requested_backend":args.backend,"device":device,"backend_reason":backend.reason,"gpu_batch_size":gpu_batch_size}));
+    eprintln!(
+        "Seed: {seed}; backend: {backend_name}; CPU workers: {threads}; {}",
+        backend.reason
+    );
+    // Large repeat jobs otherwise emit millions of JSON records. Count every
+    // completed cycle, but send at most ten progress records per second.
+    let progress_state = Mutex::new((None::<Instant>, 0u64));
+    let progress = |p: engine::Progress| {
+        if !events.enabled {
+            return;
+        }
+        let mut state = progress_state.lock().unwrap();
+        if p.phase == "cycle_complete" {
+            state.1 += 1;
+        }
+        let total = (cfg.n_runs.max(0) as u64).saturating_mul(cfg.n_dev.max(0) as u64);
+        if cfg.n_runs < 64
+            || state.0.is_none_or(|last| last.elapsed().as_millis() >= 100)
+            || (p.phase == "cycle_complete" && state.1 == total)
+        {
+            state.0 = Some(Instant::now());
+            let mut body = serde_json::to_value(p).unwrap();
+            body["completed_cycles"] = json!(state.1);
+            events.emit("progress", body);
+        }
+    };
+    let repeats = if let Some(gpu) = backend.gpu.as_mut() {
+        accelerated::simulate(gpu, &cfg, seed, threads, gpu_batch_size, ctx, progress)?
+    } else {
+        engine::simulate(&cfg, seed, threads, ctx, progress)?
+    };
     ctx.check()?;
     let result = aggregate(&cfg, &repeats)?;
     ctx.check()?;
@@ -204,7 +247,7 @@ fn execute(args: &Args, events: &Events, ctx: &Context) -> Result<()> {
     let mut metadata_path = None;
     if let Some(path) = &destination {
         let metadata = PathBuf::from(format!("{}.run.json", path.display()));
-        let record = json!({"seed":seed,"engine_version":env!("CARGO_PKG_VERSION"),"behavior_version":BEHAVIOR_VERSION,"rng":"ChaCha12, seed_from_u64, stream=2*repeat+family; family 0 Python, 1 NumPy","threads":threads,"elapsed_seconds":start.elapsed().as_secs_f64(),"run_id":events.run_id,"source_commit":"62d707eee5f348320d6e50ab034b18a3a1a45b23"});
+        let record = json!({"seed":seed,"engine_version":env!("CARGO_PKG_VERSION"),"behavior_version":BEHAVIOR_VERSION,"rng":"ChaCha12, seed_from_u64, stream=2*repeat+family; family 0 Python, 1 NumPy","threads":threads,"elapsed_seconds":start.elapsed().as_secs_f64(),"run_id":events.run_id,"source_commit":"62d707eee5f348320d6e50ab034b18a3a1a45b23","backend":backend_name,"requested_backend":args.backend,"device":device,"backend_reason":backend.reason,"gpu_batch_size":gpu_batch_size});
         // Compute/encode completely before changing an existing result file.
         let encoded = result.encode();
         ctx.check()?;
@@ -216,7 +259,7 @@ fn execute(args: &Args, events: &Events, ctx: &Context) -> Result<()> {
         )?;
         metadata_path = Some(metadata);
     }
-    events.emit("completed",json!({"result_path":destination,"metadata_path":metadata_path,"seed":seed,"elapsed_seconds":start.elapsed().as_secs_f64()}));
+    events.emit("completed",json!({"result_path":destination,"metadata_path":metadata_path,"seed":seed,"elapsed_seconds":start.elapsed().as_secs_f64(),"backend":backend_name,"device":device}));
     eprintln!(
         "Simulation completed in {:.3} seconds",
         start.elapsed().as_secs_f64()

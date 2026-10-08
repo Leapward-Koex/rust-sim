@@ -22,6 +22,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--folder", type=Path, default=ROOT / "dist" / "DictySimulator")
     parser.add_argument("--report", type=Path, default=ROOT / "verification" / "package-smoke.json")
+    parser.add_argument("--backend", choices=("auto", "cpu", "gpu"), default="auto",
+                        help="Computation backend required by the frozen-app smoke test")
     args = parser.parse_args()
     if os.name != "nt":
         parser.error("The current package test targets Windows.")
@@ -39,7 +41,8 @@ def main() -> None:
     env.update(TEMP=str(temporary), TMP=str(temporary), MPLCONFIGDIR=str(temporary / "matplotlib"))
     args.report = args.report.resolve()
     args.report.parent.mkdir(parents=True, exist_ok=True)
-    command = [str(application / "DictySimulator.exe"), "--smoke-test", str(args.report)]
+    command = [str(application / "DictySimulator.exe"), "--smoke-test", str(args.report),
+               "--backend", args.backend]
     process = subprocess.run(command, cwd=unrelated, env=env, timeout=45, capture_output=True,
                              creationflags=subprocess.CREATE_NO_WINDOW)
     if not args.report.exists():
@@ -51,6 +54,7 @@ def main() -> None:
         "rustc_on_path": shutil.which("rustc.exe", path=env["PATH"]),
         "exit_code": process.returncode,
         "fresh_windows_installation": False,
+        "requested_backend": args.backend,
     }
     errors = report.setdefault("errors", [])
     if process.returncode:

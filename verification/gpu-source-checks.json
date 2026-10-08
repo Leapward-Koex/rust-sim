@@ -1,0 +1,166 @@
+{
+  "passed": 31,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "snapshots_match",
+      "status": "passed",
+      "detail": {
+        "files_verified": 80
+      }
+    },
+    {
+      "check": "clone_identity",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "measurements_and_effects",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "exploitability_truth_table",
+      "status": "passed",
+      "detail": {
+        "binary_cases": 64,
+        "fractional_gate_cases": 2
+      }
+    },
+    {
+      "check": "init_exclusive_overlap",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "init_rounding_and_whole_genome",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "vegetative_fitness",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "mutation_inclusive_zero",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "germination_strict_boundary",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "slug_leftovers_and_aliasing",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "nondiscrete_keeps_slug",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "passive_only_error",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "duplicate_stalk_deletion",
+      "status": "passed",
+      "detail": "XOR candidate set {0,2,3}; index 0 selected twice; two front cells deleted. Set-list order is this runtime's order."
+    },
+    {
+      "check": "all_stalk_failure",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "sex_equal_values_still_recombines",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "sex_shared_loci_identity_branch",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "sex_no_recombination_inherits_parent",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "sex_alleles_independent_and_clones",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "sex_partner_failure",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "confidence_bound_default",
+      "status": "passed",
+      "detail": "Checks original function call wiring with spy sem=2 and ppf=3; not a SciPy numeric result."
+    },
+    {
+      "check": "interval_orchestration",
+      "status": "passed",
+      "detail": "Original main with stage spies and StatsSpy; schema, averaging, resets, scheduling checked."
+    },
+    {
+      "check": "list_orchestration",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "invalid_scheduler_list",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "no_runs_error",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "gui_numeric_mismatch",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "empty_init_errors",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "negative_locus_and_slug_bounds",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "mutation_draw_order_and_stale_fitness",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "stale_measurements_at_main_entry",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "failed_run_contaminates_next_run",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "json_nonfinite_defaults",
+      "status": "passed",
+      "detail": null
+    }
+  ]
+}

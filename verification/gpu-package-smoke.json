@@ -1,0 +1,65 @@
+{
+  "ok": true,
+  "engine_path": "C:\\Dev\\Dicty sim\\rust-sim\\build\\package-smoke-2ca6184b\\Unicode ü app with spaces\\dicty-sim.exe",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Dev\\Dicty sim\\rust-sim\\build\\package-smoke-2ca6184b\\Unicode ü app with spaces\\DictySimulator.exe",
+  "frozen": true,
+  "cwd": "C:\\Dev\\Dicty sim\\rust-sim\\build\\package-smoke-2ca6184b\\unrelated working directory",
+  "errors": [],
+  "heartbeats": 80,
+  "requested_backend": "gpu",
+  "modules": {
+    "numpy": {
+      "version": "1.26.4",
+      "path": "C:\\Dev\\Dicty sim\\rust-sim\\build\\package-smoke-2ca6184b\\Unicode ü app with spaces\\_internal\\numpy\\__init__.py"
+    },
+    "matplotlib": {
+      "version": "3.8.4",
+      "path": "C:\\Dev\\Dicty sim\\rust-sim\\build\\package-smoke-2ca6184b\\Unicode ü app with spaces\\_internal\\matplotlib\\__init__.py"
+    },
+    "tkinter": {
+      "version": 8.6,
+      "path": "C:\\Dev\\Dicty sim\\rust-sim\\build\\package-smoke-2ca6184b\\Unicode ü app with spaces\\_internal\\tkinter\\__init__.py"
+    }
+  },
+  "result_keys": [
+    "parameters",
+    "sex_cycle_list",
+    "x_axis_values",
+    "mean_ch",
+    "ch_ci",
+    "mean_res",
+    "res_ci",
+    "mean_wild",
+    "wild_ci",
+    "mean_mt1",
+    "mt1_ci",
+    "mean_mt2",
+    "mt2_ci",
+    "mean_mt3",
+    "mt3_ci",
+    "graph_mean_ch_eff",
+    "ch_eff_ci",
+    "graph_mean_res_eff",
+    "res_eff_ci",
+    "average_tracker_dict",
+    "ci_tracker_dict"
+  ],
+  "result_points": 4,
+  "seed": 12345,
+  "backend": "gpu",
+  "device": "NVIDIA GeForce RTX 5070 Ti",
+  "backend_reason": "Vegetative growth runs on the GPU; other phases use CPU helpers",
+  "plot_windows": 1,
+  "ui_responsive": true,
+  "elapsed_seconds": 3.0780000000013388,
+  "isolated_test": {
+    "application_copy": "C:\\Dev\\Dicty sim\\rust-sim\\build\\package-smoke-2ca6184b\\Unicode ü app with spaces",
+    "path": "C:\\Windows\\System32",
+    "python_on_path": null,
+    "rustc_on_path": null,
+    "exit_code": 0,
+    "fresh_windows_installation": false,
+    "requested_backend": "gpu"
+  }
+}

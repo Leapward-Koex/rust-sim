@@ -184,9 +184,12 @@ class RunController:
     def active(self) -> bool:
         return self.job is not None
 
-    def start(self, parameters: dict, seed: int | None = None, threads: int | None = None) -> str:
+    def start(self, parameters: dict, seed: int | None = None, threads: int | None = None,
+              backend: str = "auto") -> str:
         if self.active:
             raise RuntimeError("A simulation is already running.")
+        if backend not in ("auto", "cpu", "gpu"):
+            raise ValueError("Computation must be Automatic, CPU, or GPU-assisted.")
         if not self.engine.is_file():
             raise FileNotFoundError(f"Rust simulation executable not found: {self.engine}")
         directory = tempfile.TemporaryDirectory(prefix="dicty-run-")
@@ -197,7 +200,7 @@ class RunController:
         try:
             parameter_path.write_text(json.dumps(parameters, ensure_ascii=False), encoding="utf-8")
             arguments = [str(self.engine), *self.prefix, "--param", str(parameter_path),
-                         "--result", str(result_path), "--events"]
+                         "--result", str(result_path), "--events", "--backend", backend]
             if seed is not None:
                 arguments += ["--seed", str(seed)]
             if threads is not None:
