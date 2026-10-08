@@ -14,6 +14,23 @@ from .parameters import (DEFAULTS, TOOLTIPS, ParameterError, export_destination,
                          parameters_from_fields, save_parameters)
 
 
+BACKEND_LABELS = {"auto": "Automatic", "cpu": "CPU", "gpu": "GPU-assisted"}
+
+
+def backend_description(details: dict) -> str:
+    """Describe the engine's actual selection, including automatic CPU fallback."""
+    backend = details.get("backend")
+    if backend not in ("cpu", "gpu"):
+        return ""
+    label = "GPU-assisted" if backend == "gpu" else "CPU"
+    if backend == "gpu" and details.get("device"):
+        label += f" ({details['device']})"
+    reason = details.get("backend_reason")
+    if details.get("requested_backend") == "auto" and reason:
+        label += f" — {reason}"
+    return label
+
+
 class ToolTip:
     def __init__(self, widget, text: str):
         self.widget, self.text, self.window = widget, text, None
@@ -38,13 +55,17 @@ class ToolTip:
 
 
 class Application:
-    def __init__(self, root: tk.Tk, engine: Path | None = None, parameters: dict | None = None):
+    def __init__(self, root: tk.Tk, engine: Path | None = None, parameters: dict | None = None,
+                 backend: str = "auto"):
+        if backend not in BACKEND_LABELS:
+            raise ValueError("Computation must be auto, cpu, or gpu.")
         self.root = root
         self.parameters = copy.deepcopy(DEFAULTS if parameters is None else parameters)
         self.controller = RunController(engine or resolve_engine())
         self.base_directory = output_base_directory()
         self.closing = False
         self.repeat_cycles: dict[int, int] = {}
+        self.backend_status = ""
         self.poll_id = None
         self.plot_windows = []
         self.entries: dict[str, ttk.Entry] = {}
@@ -82,6 +103,19 @@ class Application:
         self.threads = tk.StringVar()
         self.threads_entry = ttk.Entry(execution, textvariable=self.threads, width=8)
         self.threads_entry.grid(row=0, column=3, padx=4)
+        self.tooltips.append(ToolTip(self.threads_entry,
+            "CPU mode: workers run independent repeats. GPU-assisted mode: workers are CPU "
+            "helpers while the GPU batches growth. Blank uses at most eight CPU helpers "
+            "for GPU work; CPU mode uses the available processors minus one."))
+        ttk.Label(execution, text="Computation").grid(row=1, column=0, padx=4, pady=(8, 0))
+        self.backend = tk.StringVar(value=BACKEND_LABELS[backend])
+        self.backend_choice = ttk.Combobox(execution, textvariable=self.backend,
+                                           values=tuple(BACKEND_LABELS.values()), state="readonly", width=20)
+        self.backend_choice.grid(row=1, column=1, padx=4, pady=(8, 0))
+        self.tooltips.append(ToolTip(self.backend_choice,
+            "Automatic uses GPU assistance for large workloads when a supported double-precision "
+            "GPU is available, otherwise CPU. GPU-assisted explicitly requires a supported GPU. "
+            "The actual choice and device appear below when the simulation starts."))
 
         actions = ttk.Frame(outer)
         actions.grid(row=3, column=0, pady=10)
@@ -153,6 +187,7 @@ class Application:
                        self.import_button, self.save_button, self.run_button):
             widget.configure(state=state)
         self.cancel_button.configure(state="normal" if running else "disabled")
+        self.backend_choice.configure(state="disabled" if running else "readonly")
 
     def run(self):
         if self.controller.active:
@@ -165,12 +200,14 @@ class Application:
                 raise ParameterError("Seed must be an integer from 0 through 18446744073709551615.")
             if workers is not None and workers < 1:
                 raise ParameterError("Workers must be a positive integer or blank.")
-            self.controller.start(parsed, seed, workers)
+            backend = next(key for key, label in BACKEND_LABELS.items() if label == self.backend.get())
+            self.controller.start(parsed, seed, workers, backend=backend)
         except (OSError, ValueError, RuntimeError) as exc:
             messagebox.showerror("Cannot start simulation", str(exc), parent=self.root)
             return
         self.parameters = parsed
         self.repeat_cycles.clear()
+        self.backend_status = ""
         self.progress.set(0)
         self.status.set("Starting Rust simulation…")
         self._set_running(True)
@@ -191,15 +228,19 @@ class Application:
             kind = event["type"]
             if kind == "started":
                 actual_seed = event.get("seed")
-                self.status.set(f"Simulation running. Seed: {actual_seed}")
+                self.backend_status = backend_description(event)
+                self._run_status(f"Simulation running. Seed: {actual_seed}")
             elif kind == "progress" and not self.closing:
                 repeat, cycle = event["repeat"], event["cycle"]
                 self.repeat_cycles[repeat] = max(cycle, self.repeat_cycles.get(repeat, 0))
                 total = event["total_repeats"] * event["total_cycles"]
                 if total > 0:
-                    self.progress.set(min(99.9, 100 * sum(self.repeat_cycles.values()) / total))
+                    completed = event.get("completed_cycles")
+                    if type(completed) is not int:
+                        completed = sum(self.repeat_cycles.values())
+                    self.progress.set(min(99.9, 100 * completed / total))
                 if not (self.controller.job and self.controller.job.cancel_requested):
-                    self.status.set(f"Repeat {repeat}/{event['total_repeats']} · cycle {cycle}/{event['total_cycles']} · {event['phase']}")
+                    self._run_status(f"Repeat {repeat}/{event['total_repeats']} · cycle {cycle}/{event['total_cycles']} · {event['phase']}")
             elif kind == "succeeded":
                 self._set_running(False)
                 if not self.closing:
@@ -217,12 +258,16 @@ class Application:
         elif self.closing:
             self._destroy()
 
+    def _run_status(self, message: str):
+        self.status.set(f"{self.backend_status} · {message}" if self.backend_status else message)
+
     def _completed(self, event):
         completed = event["run"]
         self.progress.set(100)
         self.export_button.configure(state="normal")
         seed = event.get("seed", completed.metadata.get("seed"))
-        self.status.set(f"Completed. Seed: {seed}")
+        self.backend_status = backend_description(completed.metadata) or self.backend_status
+        self._run_status(f"Completed. Seed: {seed}")
         try:
             self.show_plot(completed.result)
         except Exception as exc:
@@ -233,9 +278,9 @@ class Application:
                 if not Path(completed.result["parameters"]["output_filepath"]).is_absolute():
                     self.base_directory.mkdir(parents=True, exist_ok=True)
                 completed.export(destination)
-                self.status.set(f"Completed. Seed: {seed}. Saved {destination}")
+                self._run_status(f"Completed. Seed: {seed}. Saved {destination}")
             except OSError as exc:
-                self.status.set(f"Completed. Seed: {seed}. Export failed; use Save results as…")
+                self._run_status(f"Completed. Seed: {seed}. Export failed; use Save results as…")
                 messagebox.showerror("Results could not be saved", f"The simulation succeeded and results are retained.\n{exc}", parent=self.root)
 
     def show_plot(self, result: dict):
@@ -296,15 +341,17 @@ def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Dicty Simulator desktop interface")
     parser.add_argument("--engine", help="Path to the Rust simulation executable")
     parser.add_argument("--param", help="Parameter JSON to display on startup")
+    parser.add_argument("--backend", choices=tuple(BACKEND_LABELS), default="auto",
+                        help="Initial computation choice (default: auto)")
     parser.add_argument("--smoke-test", metavar="REPORT_PATH", help=argparse.SUPPRESS)
     args = parser.parse_args(argv)
     if args.smoke_test:
         from .smoke import run_smoke_test
-        raise SystemExit(run_smoke_test(Path(args.smoke_test), resolve_engine(args.engine)))
+        raise SystemExit(run_smoke_test(Path(args.smoke_test), resolve_engine(args.engine), args.backend))
     root = tk.Tk()
     try:
         parameters = load_parameters(Path(args.param)) if args.param else None
-        Application(root, resolve_engine(args.engine), parameters)
+        Application(root, resolve_engine(args.engine), parameters, args.backend)
     except Exception as exc:
         messagebox.showerror("Cannot open Dicty Simulator", str(exc), parent=root)
         root.destroy()

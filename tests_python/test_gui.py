@@ -177,6 +177,31 @@ class ControllerTests(unittest.TestCase):
                 self.assertEqual(events[-1]["type"], "failed")
                 self.assertIs(self.controller.last_result, previous)
 
+    def test_backend_selection_is_a_process_option_and_metadata(self):
+        for backend, actual in (("auto", "cpu"), ("cpu", "cpu"), ("gpu", "gpu")):
+            with self.subTest(backend=backend):
+                parameters = config(output_filepath="")
+                self.controller.start(parameters, backend=backend)
+                events = self.await_finish()
+                started = next(event for event in events if event["type"] == "started")
+                self.assertEqual(started["backend"], actual)
+                self.assertEqual(started["requested_backend"], backend)
+                self.assertEqual(self.controller.last_result.metadata["backend"], actual)
+                self.assertEqual(self.controller.last_result.result["parameters"], parameters)
+        with self.assertRaisesRegex(ValueError, "Computation"):
+            self.controller.start(config(), backend="unknown")
+        self.assertFalse(self.controller.active)
+
+    def test_unavailable_explicit_gpu_preserves_previous_result(self):
+        self.controller.start(config(), backend="cpu")
+        self.await_finish()
+        previous = self.controller.last_result
+        self.controller.start(config(_test_behavior="gpu_unavailable"), backend="gpu")
+        events = self.await_finish()
+        self.assertEqual(events[-1]["type"], "failed")
+        self.assertIn("supported double-precision GPU", events[-1]["message"])
+        self.assertIs(self.controller.last_result, previous)
+
     def test_failed_paired_export_preserves_both_previous_files(self):
         import os
         self.controller.start(config())
@@ -316,6 +341,42 @@ class TkTests(unittest.TestCase):
             time.sleep(0.01)
         self.assertFalse(self.app.controller.active)
         self.assertIsNotNone(process.poll())
+
+    def test_gpu_control_disables_during_run_and_device_survives_completion(self):
+        self.assertEqual(self.app.backend.get(), "Automatic")
+        self.app.backend.set("GPU-assisted")
+        self.app.fields["output_filepath"].set("")
+        self.app.run()
+        self.assertEqual(str(self.app.backend_choice["state"]), "disabled")
+        self.pump()
+        self.assertEqual(str(self.app.backend_choice["state"]), "readonly")
+        self.assertEqual(self.app.controller.last_result.metadata["backend"], "gpu")
+        self.assertIn("Fixture FP64 GPU", self.app.status.get())
+        self.assertEqual(len(self.app.entries), 31)
+        self.errors.assert_not_called()
+
+    def test_automatic_fallback_remains_visible_and_global_progress_is_used(self):
+        events = [
+            {"type": "started", "seed": 7, "backend": "cpu", "requested_backend": "auto",
+             "device": None, "backend_reason": "No supported GPU is available."},
+            {"type": "progress", "repeat": 1, "cycle": 2, "total_repeats": 1000,
+             "total_cycles": 10, "phase": "development", "completed_cycles": 5500},
+        ]
+        with mock.patch.object(self.app.controller, "poll", return_value=events):
+            self.app._poll()
+        self.assertEqual(self.app.progress.get(), 55.0)
+        self.assertIn("CPU", self.app.status.get())
+        self.assertIn("No supported GPU is available.", self.app.status.get())
+        self.errors.assert_not_called()
+
+    def test_source_entrypoint_passes_requested_backend_to_smoke(self):
+        from gui.app import main
+        with mock.patch("gui.smoke.run_smoke_test", return_value=0) as smoke:
+            with self.assertRaises(SystemExit) as exit_result:
+                main(["--backend", "gpu", "--smoke-test", "report.json"])
+        self.assertEqual(exit_result.exception.code, 0)
+        self.assertEqual(smoke.call_args.args[0], Path("report.json"))
+        self.assertEqual(smoke.call_args.args[2], "gpu")
 
 
 if __name__ == "__main__":

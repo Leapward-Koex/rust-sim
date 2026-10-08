@@ -14,6 +14,12 @@ An empty output path disables persistent export but still displays the graph. Re
 
 The optional seed reproduces a Rust run with the same engine version, parameters, and platform. A blank seed generates a seed, which is reported with the run. Changing the number of workers does not change a seeded result. Seeds do not reproduce Python's random sequence. Additional seed, version, and timing metadata are saved separately from the legacy result data.
 
+The **Computation** control selects **Automatic**, **CPU**, or **GPU-assisted**. Automatic uses GPU growth for workloads with at least 64 repeats, 2,048 cells, two vegetative generations, and a development cycle, when a compatible device is available. Otherwise it reports why it selected the CPU. GPU-assisted forces GPU execution and reports an error if the device or configuration is unsuitable. The status line shows the actual backend and device.
+
+GPU mode accelerates vegetative fitness, weighted parent selection, cloning, and mutation. Other phases use CPU workers. With Workers blank, GPU mode uses at most eight CPU helpers; CPU mode uses up to the logical processor count minus one. Enter a smaller Workers value to leave more CPU capacity for other applications. More workers do not necessarily make GPU mode faster. Sex-heavy workloads may favour CPU mode; the automatic threshold is a batching heuristic, not a performance guarantee.
+
+GPU mode requires an installed OpenCL graphics driver with double-precision support. It has been tested on an NVIDIA RTX 5070 Ti. No CUDA toolkit is needed. The CPU backend remains available without a GPU driver. CPU and GPU produced byte-identical seeded results in the tests on this machine; other GPU vendors and operating systems have not yet been validated.
+
 ## Model details that may be surprising
 
 - Vegetative growth happens every development cycle, with optional sex occurring before growth.
@@ -32,6 +38,14 @@ From the application folder in PowerShell:
 ```powershell
 .\dicty-sim.exe --param .\example-parameters.json --seed 739 --threads 1
 ```
+
+For GPU computation, use:
+
+```powershell
+.\dicty-sim.exe --param .\example-parameters.json --backend gpu --seed 739
+```
+
+`--backend auto|cpu|gpu` defaults to `auto`. `--gpu-batch-size 128` controls how many repeats share GPU work. The engine reduces this limit if required by device memory capacity and records the actual limit in run metadata. `--threads` controls CPU helper workers in GPU mode. These execution controls are separate from the original parameter JSON. Growth probabilities, selection weights and model quirks are preserved.
 
 The ordinary CLI writes to `output_filepath + ".json"`, relative to its working directory. Empty `output_filepath` suppresses result files. No missing output directories are created automatically.
 

@@ -1,0 +1,100 @@
+{
+  "method": "One worker; unchanged public CPU phase functions; wall-clock phase timings; no progress or output serialization",
+  "cases": [
+    {
+      "name": "ordinary_10_repeats",
+      "n": 10000,
+      "n_runs": 10,
+      "n_dev": 50,
+      "gene_pairs": 3,
+      "vg": 10,
+      "workers": 1,
+      "seed": 20261007,
+      "seconds": {
+        "initialize": 0.006878,
+        "growth": 4.325245900000002,
+        "development": 1.2465073,
+        "sex": 0.0,
+        "measurement": 0.053708800000000015,
+        "aggregation": 0.0007252
+      },
+      "wall_seconds": 5.6341883
+    },
+    {
+      "name": "mixed_10_repeats",
+      "n": 10000,
+      "n_runs": 10,
+      "n_dev": 50,
+      "gene_pairs": 3,
+      "vg": 10,
+      "workers": 1,
+      "seed": 20261007,
+      "seconds": {
+        "initialize": 0.0066447,
+        "growth": 3.870974600000001,
+        "development": 1.1492677999999998,
+        "sex": 0.0,
+        "measurement": 0.04748749999999997,
+        "aggregation": 0.0007519
+      },
+      "wall_seconds": 5.0761464
+    },
+    {
+      "name": "sex_heavy_10_repeats",
+      "n": 10000,
+      "n_runs": 10,
+      "n_dev": 50,
+      "gene_pairs": 3,
+      "vg": 10,
+      "workers": 1,
+      "seed": 20261007,
+      "seconds": {
+        "initialize": 0.006526800000000001,
+        "growth": 3.8911464000000007,
+        "development": 1.2925916999999985,
+        "sex": 0.6597171000000001,
+        "measurement": 0.04769899999999991,
+        "aggregation": 0.0007076
+      },
+      "wall_seconds": 5.8995107
+    },
+    {
+      "name": "ordinary_1000_short_repeats",
+      "n": 10000,
+      "n_runs": 1000,
+      "n_dev": 2,
+      "gene_pairs": 3,
+      "vg": 10,
+      "workers": 1,
+      "seed": 20261007,
+      "seconds": {
+        "initialize": 0.6275314000000006,
+        "growth": 15.272531699999984,
+        "development": 1.0792545999999996,
+        "sex": 0.0,
+        "measurement": 0.14421019999999998,
+        "aggregation": 0.0002562
+      },
+      "wall_seconds": 17.1544295
+    }
+  ],
+  "aggregation_only": {
+    "n_runs": 1000,
+    "n_dev": 500,
+    "synthetic_histories": true,
+    "seconds": 0.1075616
+  },
+  "growth_detail": {
+    "n_runs": 1,
+    "n_dev": 50,
+    "n": 10000,
+    "seconds": {
+      "germination": 0.0034599,
+      "weights": 0.012886000000000007,
+      "weighted_selection": 0.27580449999999995,
+      "cloning": 0.014209400000000021,
+      "mutation": 0.07645229999999995
+    },
+    "method": "Diagnostic stage-timed growth copy; checked against production growth after every generation group with same RNG stream"
+  }
+}

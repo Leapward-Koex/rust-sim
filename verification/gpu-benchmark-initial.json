@@ -1,0 +1,83 @@
+{
+  "cycles": 20,
+  "repeats": 1000,
+  "batch_size": 128,
+  "logical_cpus": 24,
+  "engine_sha256": "39b5630af633fa0fe935074d93a56f8fbe4502670fc5cc507979ba8fb9d7fb8a",
+  "method": "Fresh process wall time includes startup, GPU compilation/cache, transfers, all phases, aggregation and export. Process CPU time and peak working set sampled every 20ms. Identical seed 20261007; results compared byte for byte. GPU uses at most 8 CPU helpers; CPU uses default logical CPUs minus one.",
+  "cases": {
+    "ordinary": [
+      {
+        "backend": "cpu",
+        "sample": 0,
+        "seconds": 12.467606300000625,
+        "cpu_seconds_sampled": 264.25,
+        "average_cpu_cores": 21.194926567418698,
+        "peak_working_set_bytes": 38178816,
+        "result_sha256": "3c0a88dcbc0cd35a51aec02231460f7223899baae637fb1f7cb05bc007290377",
+        "threads": 23,
+        "device": null
+      },
+      {
+        "backend": "gpu",
+        "sample": 0,
+        "seconds": 10.965422900000704,
+        "cpu_seconds_sampled": 39.59375,
+        "average_cpu_cores": 3.610781851377338,
+        "peak_working_set_bytes": 296251392,
+        "result_sha256": "3c0a88dcbc0cd35a51aec02231460f7223899baae637fb1f7cb05bc007290377",
+        "threads": 8,
+        "device": "NVIDIA GeForce RTX 5070 Ti"
+      }
+    ],
+    "sex-heavy": [
+      {
+        "backend": "cpu",
+        "sample": 0,
+        "seconds": 15.396045499997854,
+        "cpu_seconds_sampled": 325.046875,
+        "average_cpu_cores": 21.112361287841434,
+        "peak_working_set_bytes": 40583168,
+        "result_sha256": "6f5630c7e107011ff1e4f580f35a9d2e89227d5f3702fc892185b55e6c32c0ed",
+        "threads": 23,
+        "device": null
+      },
+      {
+        "backend": "gpu",
+        "sample": 0,
+        "seconds": 16.90081790000113,
+        "cpu_seconds_sampled": 85.25,
+        "average_cpu_cores": 5.044134580019012,
+        "peak_working_set_bytes": 306769920,
+        "result_sha256": "6f5630c7e107011ff1e4f580f35a9d2e89227d5f3702fc892185b55e6c32c0ed",
+        "threads": 8,
+        "device": "NVIDIA GeForce RTX 5070 Ti"
+      }
+    ],
+    "higher-locus": [
+      {
+        "backend": "cpu",
+        "sample": 0,
+        "seconds": 22.44357979999768,
+        "cpu_seconds_sampled": 443.359375,
+        "average_cpu_cores": 19.754396533481966,
+        "peak_working_set_bytes": 48742400,
+        "result_sha256": "aaa959e2510e0924efe5cf54c01e12e89ccbaa991954364025179bcd8af95a98",
+        "threads": 23,
+        "device": null
+      },
+      {
+        "backend": "gpu",
+        "sample": 0,
+        "seconds": 15.713113800004066,
+        "cpu_seconds_sampled": 63.296875,
+        "average_cpu_cores": 4.028283369269789,
+        "peak_working_set_bytes": 345538560,
+        "result_sha256": "aaa959e2510e0924efe5cf54c01e12e89ccbaa991954364025179bcd8af95a98",
+        "threads": 8,
+        "device": "NVIDIA GeForce RTX 5070 Ti"
+      }
+    ]
+  },
+  "exact_results_match": true
+}

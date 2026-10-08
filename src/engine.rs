@@ -103,7 +103,7 @@ pub fn initialize<R: Choices>(cfg: &Config, rng: &mut R, ctx: &Context) -> Resul
     Ok(pop)
 }
 
-pub fn growth<R: Choices>(
+pub fn germinate<R: Choices>(
     mut pop: Population,
     cfg: &Config,
     rng: &mut R,
@@ -122,6 +122,16 @@ pub fn growth<R: Choices>(
         }
     }
     pop.retain_mask(&keep);
+    Ok(pop)
+}
+
+pub fn growth<R: Choices>(
+    pop: Population,
+    cfg: &Config,
+    rng: &mut R,
+    ctx: &Context,
+) -> Result<Population> {
+    let mut pop = germinate(pop, cfg, rng, ctx)?;
     let mut next = Population::new(pop.loci);
     let mut weights = Vec::new();
     for _ in 0..cfg.vg.integer()? {

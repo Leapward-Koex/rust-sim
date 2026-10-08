@@ -1,6 +1,8 @@
+pub mod accelerated;
 pub mod aggregate;
 pub mod config;
 pub mod engine;
+pub mod gpu;
 pub mod json;
 pub mod model;
 pub mod random;

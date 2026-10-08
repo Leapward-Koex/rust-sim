@@ -19,6 +19,14 @@ pub struct NativeChoices {
     np: ChaCha12Rng,
     cancel: Arc<AtomicBool>,
 }
+/// Exact state needed to run the existing Python-family ChaCha12 stream on a
+/// device. Positions are in u32 words, including a possible odd offset.
+#[derive(Clone, Copy, Debug)]
+pub(crate) struct PyStream {
+    pub key: [u32; 8],
+    pub stream: u64,
+    pub word_pos: u64,
+}
 impl NativeChoices {
     pub fn new(seed: u64, repeat: usize, cancel: Arc<AtomicBool>) -> Self {
         let mut py = ChaCha12Rng::seed_from_u64(seed);
@@ -26,6 +34,29 @@ impl NativeChoices {
         py.set_stream((repeat as u64).wrapping_mul(2));
         np.set_stream((repeat as u64).wrapping_mul(2).wrapping_add(1));
         Self { py, np, cancel }
+    }
+    pub(crate) fn py_stream(&self) -> Result<PyStream> {
+        let seed = self.py.get_seed();
+        let mut key = [0; 8];
+        for (word, bytes) in key.iter_mut().zip(seed.chunks_exact(4)) {
+            *word = u32::from_le_bytes(bytes.try_into().unwrap());
+        }
+        Ok(PyStream {
+            key,
+            stream: self.py.get_stream(),
+            word_pos: self.py.get_word_pos().try_into().map_err(|_| {
+                "GPU random stream position exceeds supported 64-bit word offset".to_string()
+            })?,
+        })
+    }
+    pub(crate) fn advance_py_words(&mut self, words: u64) -> Result<()> {
+        let end = self
+            .py_stream()?
+            .word_pos
+            .checked_add(words)
+            .ok_or("GPU random stream position overflow")?;
+        self.py.set_word_pos(end as u128);
+        Ok(())
     }
     fn check(&self) -> Result<()> {
         if self.cancel.load(Ordering::Relaxed) {

@@ -1,0 +1,35 @@
+{
+  "cycles": 500,
+  "repeats": 1000,
+  "batch_size": 128,
+  "logical_cpus": 24,
+  "engine_sha256": "61157ce01caee21f8a473a08f500ffafc4634e5eea4798a80ef246809207500c",
+  "method": "Fresh process wall time includes startup, GPU compilation/cache, transfers, all phases, aggregation and export. Process CPU time and peak working set sampled every 20ms. Identical seed 20261007; results compared byte for byte. GPU uses at most 8 CPU helpers; CPU uses default logical CPUs minus one.",
+  "cases": {
+    "ordinary": [
+      {
+        "backend": "cpu",
+        "sample": 0,
+        "seconds": 346.80817730000126,
+        "cpu_seconds_sampled": 7651.578124999999,
+        "average_cpu_cores": 22.06285383628978,
+        "peak_working_set_bytes": 131334144,
+        "result_sha256": "58bcf9ab8c45c43b127ea331f84ecd08453566715bb82e0e8803c663f7acd535",
+        "threads": 23,
+        "device": null
+      },
+      {
+        "backend": "gpu",
+        "sample": 0,
+        "seconds": 323.16390999999567,
+        "cpu_seconds_sampled": 1590.21875,
+        "average_cpu_cores": 4.920780757975176,
+        "peak_working_set_bytes": 372686848,
+        "result_sha256": "58bcf9ab8c45c43b127ea331f84ecd08453566715bb82e0e8803c663f7acd535",
+        "threads": 8,
+        "device": "NVIDIA GeForce RTX 5070 Ti"
+      }
+    ]
+  },
+  "exact_results_match": true
+}

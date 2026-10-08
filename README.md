@@ -10,6 +10,8 @@ See the [user guide](USER_GUIDE.md) for parameters, output files, seeds, CLI com
 
 The engine uses compact population buffers and independent repeat workers. Reproducible Rust seeds do not reproduce Python's random sequence. Scripted differential checks compare state transitions with the original source, and statistical checks use actual pinned SciPy. See the [release verification and limits](verification/RELEASE.md) and [performance measurements](verification/PERFORMANCE.md): 45–74× measured single-worker improvement, with the full default workload completing in about 6 seconds using ten workers on the tested machine.
 
+The `gpu-acceleration` branch adds optional OpenCL GPU computation for vegetative growth, with CPU fallback and a **Computation** selector in the desktop interface. GPU mode retains the existing random streams and model rules. See the [GPU implementation and measurements](verification/GPU-ACCELERATION.md) for the measured speed and CPU-use tradeoff, hardware requirements, and verification.
+
 The reference entry point is `DictySimulator/dicty_sim_test_env.py`, as selected by the existing repository README. The older `dicty_sim_v0.6.py` is a different implementation and is not an interchangeable reference.
 
 The existing VS Code `Sim` launch configuration selects that older version. The specification explicitly records this alternate entry point so it cannot silently change which model a remake follows.

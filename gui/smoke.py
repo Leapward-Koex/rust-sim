@@ -10,11 +10,12 @@ import time
 import traceback
 
 
-def run_smoke_test(report_path: Path, engine: Path) -> int:
+def run_smoke_test(report_path: Path, engine: Path, backend: str = "auto") -> int:
     started = time.monotonic()
     report = {"ok": False, "engine_path": str(engine), "python": sys.version,
               "executable": sys.executable, "frozen": bool(getattr(sys, "frozen", False)),
-              "cwd": str(Path.cwd()), "errors": [], "heartbeats": 0}
+              "cwd": str(Path.cwd()), "errors": [], "heartbeats": 0,
+              "requested_backend": backend}
     root = None
     app = None
     original_error = None
@@ -35,7 +36,7 @@ def run_smoke_test(report_path: Path, engine: Path) -> int:
         root.withdraw()
         parameters = copy.deepcopy(DEFAULTS)
         parameters.update(n=48, sl=8, n_dev=3, n_runs=2, vg=1, output_filepath="")
-        app = Application(root, engine, parameters)
+        app = Application(root, engine, parameters, backend)
         app.seed.set("12345")
         app.threads.set("2")
         original_error = messagebox.showerror
@@ -69,11 +70,15 @@ def run_smoke_test(report_path: Path, engine: Path) -> int:
                 report["result_keys"] = list(result.result)
                 report["result_points"] = len(result.result["x_axis_values"])
                 report["seed"] = result.metadata.get("seed")
+                report["backend"] = result.metadata.get("backend")
+                report["device"] = result.metadata.get("device")
+                report["backend_reason"] = result.metadata.get("backend_reason")
                 report["plot_windows"] = len(app.plot_windows)
                 report["ui_responsive"] = report["heartbeats"] >= 2
                 report["ok"] = (not report["errors"] and len(result.result) == 21
                                 and report["plot_windows"] == 1 and report["ui_responsive"]
-                                and result.result["parameters"]["output_filepath"] == "")
+                                and result.result["parameters"]["output_filepath"] == ""
+                                and (backend == "auto" or report["backend"] == backend))
             else:
                 report["errors"].append("No completed result was retained: " + app.status.get())
             app.close()
